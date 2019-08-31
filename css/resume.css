@@ -93,6 +93,22 @@ p.lead {
   outline-color: #d48a6e;
 }
 
+.mobile-image {
+    visibility: hidden;
+    display: none;
+  }
+@media only screen and (max-width: 1000px) {
+.mobile-image {
+    visibility: visible;
+    display: block;
+  }
+  .img-profile{
+    max-width: 10rem;
+    max-height: 10rem;
+    border: 0.5rem solid rgba(175, 172, 172, 0.2);
+  }
+}
+
 @media (min-width: 992px) {
   #sideNav {
     text-align: center;
