@@ -106,6 +106,8 @@ p.lead {
     max-width: 10rem;
     max-height: 10rem;
     border: 0.5rem solid rgba(175, 172, 172, 0.2);
+    border-radius: 15%!important;
+
   }
 }
 
