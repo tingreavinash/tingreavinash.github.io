@@ -8,7 +8,10 @@ body {
   font-family: 'Muli', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   padding-top: 54px;
   color: #868e96;
+  user-select: none;
 }
+
+
 
 @media (min-width: 992px) {
   body {
@@ -209,3 +212,15 @@ a {
 a:hover, a:focus, a:active {
   color: #824027;
 }
+
+/*.card h5 {
+  text-transform: none;
+}*/
+.cert_img {
+  width: 100%;
+  padding: 5rem 1rem 5rem 1rem;
+}
+.cert-img-box{
+  height: 13rem;
+}
+
