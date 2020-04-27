@@ -9,6 +9,7 @@ body {
   padding-top: 54px;
   color: #868e96;
   user-select: none;
+
 }
 
 
@@ -228,7 +229,7 @@ a:hover, a:focus, a:active {
   padding: 4rem 1rem 4rem 1rem;
 }
 .cert-img-box{
-  height: 13rem;
+  /*height: 13rem;*/
 }
 
 .custom-card-style {
