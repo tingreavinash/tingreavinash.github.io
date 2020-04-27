@@ -112,8 +112,11 @@ p.lead {
     border-radius: 15%!important;
 
   }
-  .mobile-fit{
-    margin-top: 2rem;
+  .mobile-fit-cert{
+    margin: 2rem;
+  }
+  .mobile-fit-activities{
+    margin-left: 0rem;
   }
 
 }
