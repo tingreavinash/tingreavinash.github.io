@@ -119,7 +119,9 @@ p.lead {
   .mobile-fit-activities{
     margin: 0rem;
   }
-
+.mobile-center-parent{
+  text-align: center;
+}
 }
 
 @media (min-width: 992px) {
