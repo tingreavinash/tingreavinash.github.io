@@ -1,9 +1,12 @@
-/*!
- * Start Bootstrap - Resume v5.0.7 (https://startbootstrap.com/template-overviews/resume)
- * Copyright 2013-2019 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-resume/blob/master/LICENSE)
- */
-
+:root {
+  --main-bg-color: #E64A19;
+}
+.preview-anchor{
+	font-size: 0.75rem;
+	text-transform: none;
+	font-weight: bold;
+	font-family: 'Muli', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
 body {
   font-family: 'Muli', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   padding-top: 54px;
@@ -76,7 +79,7 @@ p.lead {
 }
 
 .social-icons a:hover {
-  background-color: #C62828;
+  background-color: var(--main-bg-color);
 }
 
 .dev-icons {
@@ -84,7 +87,7 @@ p.lead {
 }
 
 .dev-icons .list-inline-item i:hover {
-  color: #C62828;
+  color: var(--main-bg-color);
 }
 
 #sideNav .navbar-nav .nav-item .nav-link {
@@ -208,33 +211,32 @@ section.resume-section .resume-item .resume-date {
 }
 
 .bg-primary {
-  background-color: #C62828 !important;
+  background-color: var(--main-bg-color) !important;
 }
 
 .text-primary {
-  color: #C62828 !important;
+  color: var(--main-bg-color) !important;
 }
 
 a {
-  color: #C62828;
+  color: var(--main-bg-color);
 }
 
 a:hover, a:focus, a:active {
   color: #824027;
 }
 
-/*.card h5 {
-  text-transform: none;
-}*/
+
 .cert_img {
   width: 100%;
   padding: 4rem 1rem 4rem 1rem;
 }
 .cert-img-box{
-  /*height: 13rem;*/
+  border-color: var(--main-bg-color);
 }
 
 .custom-card-style {
+  border-color: var(--main-bg-color);
   border-radius: 10px;
   box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.19);
 }
@@ -262,8 +264,6 @@ a:hover, a:focus, a:active {
 /* scrollbar handle */
 .custom-scrollbar-css::-webkit-scrollbar-thumb {
   border-radius: 3rem;
-/*  background-color: #00d2ff;
-  background-image: linear-gradient(to top, #00d2ff 0%, #3a7bd5 100%);*/
   background-color: #f5af19;
   background-image: linear-gradient(to top, #f5af19 0%, #f12711 100%);
 }
