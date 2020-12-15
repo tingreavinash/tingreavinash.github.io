@@ -1,6 +1,27 @@
 :root {
   --main-bg-color: #E64A19;
+  --chip-color: #E64A19;
+  --text-selection-color: #f1c40f;
 }
+
+.chip {
+      display: inline-block;
+      padding: 0 15px;
+      height: 1.4rem;
+      font-size: 14px;
+      font-weight: normal;
+      line-height: 1.4rem;
+      border-radius: 25px;
+      opacity: 0.7;
+      background-color: #28a745;
+      color: white;
+   }
+.chip:hover{
+	opacity: 1.0;
+	cursor: pointer;
+	
+}
+
 .preview-anchor{
 	font-size: 0.75rem;
 	text-transform: none;
@@ -9,7 +30,7 @@
 }
 
 ::selection {
-  background-color: #f1c40f;
+  background-color: var(--text-selection-color);
   /* background-color: #E64A19; */
   color: #000;
 }
