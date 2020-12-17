@@ -264,7 +264,9 @@ a:hover, a:focus, a:active {
 .cert-img-box{
   border-color: var(--main-bg-color);
 }
-
+.list-inline{
+	font-size: 2rem;
+}
 .custom-card-style {
 	width: 21rem;
 	border-color: var(--main-bg-color);
