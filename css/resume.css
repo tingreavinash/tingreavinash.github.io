@@ -21,7 +21,9 @@
 	cursor: pointer;
 	
 }
-
+th{
+	opacity: 0.7;
+}
 .preview-anchor{
 	font-size: 0.75rem;
 	text-transform: none;
@@ -264,9 +266,11 @@ a:hover, a:focus, a:active {
 }
 
 .custom-card-style {
-  border-color: var(--main-bg-color);
-  border-radius: 10px;
-  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.19);
+	width: 21rem;
+	
+	border-color: var(--main-bg-color);
+	border-radius: 10px;
+	box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.19);
 }
 
 .custom-scrollbar-css {
