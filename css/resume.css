@@ -1,6 +1,6 @@
 :root {
   --main-bg-color: #E64A19;
-  --chip-color: #E64A19;
+  --chip-color: #28a745;
   --text-selection-color: #f1c40f;
 }
 
@@ -11,9 +11,9 @@
       font-size: 14px;
       font-weight: normal;
       line-height: 1.4rem;
-      border-radius: 25px;
+      border-radius: 0.4rem;
       opacity: 1;
-      background-color: #28a745;
+      background-color: var(--chip-color);
       color: white;
    }
 .chip:hover{
