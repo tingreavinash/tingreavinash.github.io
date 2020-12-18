@@ -55,7 +55,9 @@ body {
   /* user-select: none; */
 
 }
-
+.navbar{
+	overflow: auto;
+}
 
 
 @media (min-width: 992px) {
