@@ -23,13 +23,13 @@ mark:hover{
       /* background-color: var(--chip-color); */
       color: white;
       background-color: var(--chip-bg-color);
-	  border-bottom: 4px solid var(--chip-color-border);
+	  border-bottom: 3px solid var(--chip-color-border);
 	  transition: border-bottom 0.2s;
    }
 .chip:hover{
 	background-color: #333333bd;
 	cursor: pointer;
-	border-bottom: 4px solid var(--text-selection-color);
+	border-bottom: 3px solid var(--text-selection-color);
 	
 }
 th{
