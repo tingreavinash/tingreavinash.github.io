@@ -161,6 +161,7 @@ p.lead {
   }
   .img-profile:hover{
     border: 0.2rem solid rgba(175, 172, 172, 0.2);
+    /* border-radius: 15%!important; */
     
   }
   .mobile-fit-cert{
@@ -205,6 +206,7 @@ p.lead {
   }
   #sideNav .navbar-brand .img-profile:hover {
     border: 0.5rem solid rgba(255, 255, 255, 0.4);
+    /* border-radius: 40% !important; */
   }
   #sideNav .navbar-collapse {
     display: -webkit-box;
