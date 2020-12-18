@@ -295,9 +295,6 @@ a:hover, a:focus, a:active {
 	box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.19);
 }
 
-.custom-scrollbar-css {
-  height: 5rem;
-}
 
 
 /* Custom Scrollbar using CSS */
