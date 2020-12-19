@@ -11,21 +11,19 @@ mark{
 mark:hover{
 	background-color: var(--mark-background);
 }
-.chip:hover{
-	opacity: 0.6;
-	cursor: pointer;
-}
+
 .chip {
       display: inline-block;
       padding: 0 1rem;
       /* height: 1.4rem; */
       font-size: 14px;
       font-weight: normal;
-      line-height: 1.4rem;
+      line-height: 1.2rem;
       border-radius: 0.3rem;
       opacity: 1;
+      cursor: pointer;
       
-      transition: opacity 0.2s;
+	  transition: background-color 0.2s;
    }
 .chip-small{
 	font-size: small !important;
@@ -34,15 +32,20 @@ mark:hover{
 .chip-pill{
 	border-radius: 1.4rem !important;
 }
-.chip-black{
-	color: white;
-	background-color: var(--chip-bg-color);
+
+
+.chip-border-primary{
+	color: var(--main-bg-color);
+	border: 1px solid var(--main-bg-color);
 }
+.chip-border-primary:hover{
+	
+	background-color: #e64a192e;
+	/* background-color: var(--main-bg-color); */
+}
+
 .chip-border-green{
 	border-bottom: 3px solid var(--chip-color-border);
-}
-.chip-border-primary{
-	border-bottom: 3px solid var(--main-bg-color);
 }
 .chip-border-yellow{
 	border-bottom: 3px solid var(--text-selection-color);
