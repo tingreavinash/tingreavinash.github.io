@@ -15,15 +15,12 @@ mark:hover{
 .chip {
       display: inline-block;
       padding: 0 1rem;
-      /* height: 1.4rem; */
       font-size: 14px;
       font-weight: normal;
       line-height: 1.2rem;
       border-radius: 0.3rem;
       opacity: 1;
-      cursor: pointer;
-      
-	  transition: background-color font-weight 0.2s;
+      transition: background-color font-weight 0.2s;
    }
 .chip-small{
 	font-size: small !important;
@@ -42,7 +39,6 @@ mark:hover{
 	border: 1px solid var(--main-bg-color);
 	background-color: #e64a192e;
 	font-weight: bold;
-	/* background-color: var(--main-bg-color); */
 }
 
 .chip-border-green{
@@ -64,7 +60,6 @@ th{
 
 ::selection {
   background-color: var(--text-selection-color);
-  /* background-color: #E64A19; */
   color: #000;
 }
 
@@ -181,7 +176,6 @@ p.lead {
   }
   .img-profile:hover{
     border: 0.2rem solid rgba(175, 172, 172, 0.2);
-    /* border-radius: 15%!important; */
     
   }
   .mobile-fit-cert{
@@ -226,7 +220,7 @@ p.lead {
   }
   #sideNav .navbar-brand .img-profile:hover {
     border: 0.5rem solid rgba(255, 255, 255, 0.4);
-    /* border-radius: 40% !important; */
+    
   }
   #sideNav .navbar-collapse {
     display: -webkit-box;
