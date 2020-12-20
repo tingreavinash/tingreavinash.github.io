@@ -23,7 +23,7 @@ mark:hover{
       opacity: 1;
       cursor: pointer;
       
-	  transition: background-color 0.2s;
+	  transition: background-color font-weight 0.2s;
    }
 .chip-small{
 	font-size: small !important;
@@ -39,8 +39,9 @@ mark:hover{
 	border: 1px solid var(--main-bg-color);
 }
 .chip-border-primary:hover{
-	
+	border: 1px solid var(--main-bg-color);
 	background-color: #e64a192e;
+	font-weight: bold;
 	/* background-color: var(--main-bg-color); */
 }
 
@@ -300,17 +301,24 @@ a:hover, a:focus, a:active {
 
 
 .cert_img {
-  width: 100%;
-  padding: 4rem 1rem 4rem 1rem;
+  width: 80%;
+  height: auto;
+  display: block;
+	margin: auto;
+  
 }
 .cert-img-box{
-  border-color: var(--chip-bg-color);
+	height: 10rem;
+	display: grid;
+	align-content: center;
+ 	border-color: var(--chip-bg-color);
 }
 .list-inline{
 	font-size: 2rem;
 }
 .custom-card-style {
-	width: 21rem;
+	width: 18rem;
+	height: 22rem;
 	border-color: var(--chip-bg-color);
 	border-radius: 10px;
 	box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.19);
