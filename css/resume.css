@@ -38,7 +38,7 @@ mark:hover{
 .chip-border-primary:hover{
 	border: 1px solid var(--main-bg-color);
 	background-color: #e64a192e;
-	font-weight: bold;
+	/* font-weight: bold; */
 }
 
 .chip-border-green{
