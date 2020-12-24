@@ -264,9 +264,10 @@ ul{
     max-width: 10rem;
     max-height: 10rem;
     border: 0.5rem solid rgba(255, 255, 255, 0.2);
-    transition: border 0.3s;
+    transition: border filter 0.3s;
   }
   #sideNav .navbar-brand .img-profile:hover {
+  	filter:brightness(110%);
     border: 0.5rem solid rgba(255, 255, 255, 0.4);
     
   }
