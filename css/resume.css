@@ -5,6 +5,18 @@
   --chip-bg-color: #333;
   --mark-background: #fff09b;
 }
+.section-heading {
+	transition-property: margin-left;
+	transition-duration: 0.5s;
+	transition-timing-function: ease;
+	
+}
+
+.section-heading:hover{
+	margin-left: 1rem;
+	cursor: pointer;
+}
+
 mark{
 	transition: background-color 0.1s;
 }
