@@ -2,7 +2,7 @@
   --main-bg-color: #E64A19;
   --chip-color-border: #5bb511;
   --text-selection-color: #f1c40f;
-  --chip-bg-color: #333;
+  --chip-bg-color: #bdbdbd;
   --mark-background: #fff09b;
 }
 .card-title{
@@ -380,17 +380,20 @@ a:hover, a:focus, a:active {
   
 }
 .cert-img-box{
+	border-right-color: var(--chip-bg-color);
 	height: 10rem;
-	display: grid;
-	align-content: center;
- 	border-color: var(--chip-bg-color);
+    display: grid;
+    align-content: center;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-bottom-width: 0px;
 }
 .list-inline{
 	font-size: 2rem;
 }
 .custom-card-style {
-	width: 18rem;
-	height: 22rem;
+	/* width: 18rem;
+	height: 22rem; */
 	border-color: var(--chip-bg-color);
 	border-radius: 10px;
 	box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.19);
