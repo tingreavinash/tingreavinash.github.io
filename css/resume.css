@@ -5,6 +5,23 @@
   --chip-bg-color: #333;
   --mark-background: #fff09b;
 }
+.card-title{
+	text-transform: none;
+}
+.cert-expand{
+	outline: none;
+    box-shadow: inherit !important;
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    font-size: 2rem;
+    transition: color 0.3s, transform 0.3s;
+}
+.cert-expand:hover{
+	color: crimson;
+	transform: scale(1.3);
+}
+
 .section-heading {
 	transition-property: margin-left;
 	transition-duration: 0.5s;
