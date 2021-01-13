@@ -205,6 +205,22 @@ p.lead {
     display: none;
   }
 @media only screen and (max-width: 1000px) {
+.mobile-fit-docker{
+	width: 50% !important;
+	height: inherit !important;
+}
+.cert_img{
+	width: 50% !important;
+}
+.cert-img-box{
+	border-right-color: var(--chip-bg-color);
+	height: 10rem;
+    display: grid;
+    align-content: center;
+    border-bottom-style: solid !important;
+    border-bottom-width: 1px !important;
+    border-right-width: 0px !important;
+}	
 .mobile-image {
     visibility: visible;
     display: block;
