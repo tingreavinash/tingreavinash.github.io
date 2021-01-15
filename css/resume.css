@@ -5,6 +5,8 @@
   --chip-bg-color: #bdbdbd;
   --mark-background: #fff09b;
 }
+body {background:#f3efe875;}
+
 .card-title{
 	text-transform: none;
 }
@@ -413,6 +415,11 @@ a:hover, a:focus, a:active {
 	border-color: var(--chip-bg-color);
 	border-radius: 10px;
 	box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.19);
+	transition: transform 0.2s, box-shadow 0.2s;
+}
+.custom-card-style:hover{
+	transform:translate(3px,3px);
+	box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2), 0 0px 0px 0 rgba(0, 0, 0, 0.19);
 }
 
 
@@ -438,3 +445,6 @@ a:hover, a:focus, a:active {
   background-color: #f5af19;
   background-image: linear-gradient(to top, #f5af19 0%, #f12711 100%);
 }
+
+
+/*-----------*/
