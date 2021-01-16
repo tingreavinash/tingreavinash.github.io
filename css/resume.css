@@ -215,6 +215,9 @@ p.lead {
 .navbar{
 box-shadow: 0 4px 9px 0 rgba(0, 0, 0, 0.2);
 }
+.custom-scrollbar-css {
+    overflow-y: hidden !important;
+}
 .mobile-fit-docker{
 	width: 50% !important;
 	height: inherit !important;
