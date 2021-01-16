@@ -37,7 +37,7 @@ body {
 }
 
 .section-heading:hover{
-	margin-left: 1rem;
+	margin-left: 0.5rem;
 	cursor: pointer;
 }
 
@@ -424,8 +424,7 @@ a:hover, a:focus, a:active {
 }
 .custom-card-style:hover{
 	transform:translate(0px,-3px); 
-	
-	box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.19);
+	box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2), 0 2px 5px 0 rgba(0, 0, 0, 0.19);
 }
 
 
