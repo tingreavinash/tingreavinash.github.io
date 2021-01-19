@@ -217,7 +217,7 @@ p.lead {
     overflow-y: hidden !important;
     border-bottom-left-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem;
-
+	text-align: center!important;
 }
 
 .mobile-fit-docker{
