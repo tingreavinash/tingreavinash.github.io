@@ -429,7 +429,8 @@ a:hover, a:focus, a:active {
 	transition: transform 0.2s, box-shadow 0.2s;
 }
 .custom-card-style:hover{
-	transform:translate(0px,-3px); 
+	/* transform:translate(0px,-3px);  */
+	transform: scale(1.01);
 	box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2), 0 2px 5px 0 rgba(0, 0, 0, 0.19);
 }
 
