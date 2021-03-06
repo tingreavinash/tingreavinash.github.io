@@ -57,9 +57,9 @@ mark:hover{
     font-style: italic;
     
 }
-.successBorder{
+.side-border{
 	border-left-width: 4px;
-    border-left-color: #28a745;
+    border-left-color: var(--warning);
 }
 .chip {
       display: inline-block;
