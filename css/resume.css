@@ -462,3 +462,12 @@ a:hover, a:focus, a:active {
 
 
 /*-----------*/
+
+.skill-icons > div > img {
+width: 3rem;
+}
+
+.skill-icons > .col {
+text-align: center;
+margin-bottom: 1rem;
+}
