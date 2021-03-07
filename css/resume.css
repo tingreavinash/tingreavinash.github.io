@@ -426,6 +426,7 @@ a:hover, a:focus, a:active {
 	font-size: 2rem;
 }
 .custom-card-style {
+    border-top: 5px solid var(--warning);
     cursor: pointer;
     border-radius: 0px 0px 7px 7px;
     transition: transform 0.2s, box-shadow 0.2s;
@@ -472,6 +473,3 @@ text-align: center;
 margin-bottom: 1rem;
 }
 
-.custom-border-top {
-border-top: 5px solid var(--warning);
-}
