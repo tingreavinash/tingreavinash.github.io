@@ -48,18 +48,15 @@ mark:hover{
 	background-color: var(--mark-background);
 }
 .myBox{
-    border-width: 1px;
-    border-style: solid;
+    border: 1px solid #8080802e;
     border-radius: .2rem;
-    border-color: #8080802e;
-    
+
     padding: 0.5rem 0.5rem 0.5rem 1rem;
     font-style: italic;
     
 }
 .side-border{
-	border-left-width: 4px;
-    border-left-color: var(--warning);
+    border-left: 4px solid var(--warning);
 }
 .chip {
       display: inline-block;
@@ -226,16 +223,18 @@ p.lead {
 }
 .cert_img_mobile{
 	width: 50% !important;
+    object-fit: scale-down;
+    padding: 5px;
 }
 .cert-img-box{
-	border-right-color: var(--chip-bg-color);
+
+    border-right: 0px solid rgba(0,0,0,.125) !important;
+
+    border-bottom: 1px solid rgba(0,0,0,.125) !important;
 	height: 10rem;
     display: grid;
     align-content: center;
-    border-bottom-style: solid !important;
-    border-bottom-width: 1px !important;
-    border-right-width: 0px !important;
-}	
+}
 .mobile-image {
     visibility: visible;
     display: block;
@@ -407,33 +406,29 @@ a:hover, a:focus, a:active {
   width: 90%;
   height: auto;
   display: block;
-	margin: auto;
-  
+  margin: auto;
+  object-fit: scale-down;
+
 }
 .cert-img-box{
-	border-right-color: var(--chip-bg-color);
+	border-right: 1px solid rgba(0,0,0,.125);
 	height: 10rem;
     display: grid;
     align-content: center;
-    border-right-style: solid;
-    border-right-width: 1px;
     border-bottom-width: 0px;
 }
 .list-inline{
 	font-size: 2rem;
 }
 .custom-card-style {
-	/* width: 18rem;
-	height: 22rem; */
-	border-color: var(--chip-bg-color);
-	border-radius: 10px;
-	box-shadow: inset 0 0px 4px 1px rgba(0, 0, 0, 0.2);
-	transition: transform 0.2s, box-shadow 1s;
+    cursor: pointer;
+    border-radius: 0 0 5px 5px;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 .custom-card-style:hover{
-	/* transform:translate(0px,-3px);  */
-	transform: scale(1.01);
-	box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2), 0 2px 5px 0 rgba(0, 0, 0, 0.19);
+    transform: translateY(-3px);
+    top: -3px;
+    box-shadow: 0 10px 20px 0 rgb(108 135 135 / 20%);
 }
 
 
