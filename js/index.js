@@ -32,9 +32,9 @@ function populatedata(imgSrc, certUrl){
     console.log("model is opened");
   }
 
-$(window).on('load',function(){
+/*$(window).on('load',function(){
     $('#myModal').modal('show');
-});
+});*/
 
 
 $(function () {
@@ -70,7 +70,8 @@ function showGreeting(){
 
 $(function () {
     AOS.init({
-      duration: 1000,
+      duration: 1200,
       easing: 'ease-in-out-back'
+
     });
 })
