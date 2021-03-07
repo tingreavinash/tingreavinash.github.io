@@ -29,7 +29,7 @@ body {
 	transform: scale(1.3);
 }
 
-.section-heading {
+/*.section-heading {
 	transition-property: margin-left;
 	transition-duration: 0.5s;
 	transition-timing-function: ease;
@@ -39,7 +39,7 @@ body {
 .section-heading:hover{
 	margin-left: 0.5rem;
 	cursor: pointer;
-}
+}*/
 
 mark{
 	transition: background-color 0.1s;
@@ -293,6 +293,10 @@ p.lead {
 }
 ul{
 	font-size: small !important;
+}
+
+.skill-icons > div > img {
+width: 2rem !important;
 }
 }
 
