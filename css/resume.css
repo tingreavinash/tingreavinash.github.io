@@ -236,6 +236,11 @@ p.lead {
     display: grid;
     align-content: center;
 }
+
+.person-svg-mobile{
+    display: none;
+}
+
 .mobile-image {
     visibility: visible;
     display: block;
@@ -473,3 +478,118 @@ text-align: center;
 margin-bottom: 1rem;
 }
 
+
+/*********** ANIMATIONS ***********/
+.person-svg{
+        position: absolute;
+        max-width: 35rem;
+        bottom: 0px;
+        right: 0px;
+        overflow: visible;
+}
+
+#person-1,
+#person-2,
+#headphones,
+#face,
+#hair,
+#cap-1,
+#cap-3,
+#cap {
+  animation: person 1.5s ease-in-out infinite alternate;
+  transform-origin: bottom;
+}
+
+#neck {
+  animation: person-neck 1s ease-in-out infinite alternate;
+  transform-origin: center;
+}
+
+#plant-top {
+  animation: wave 6s -0.5s linear infinite alternate;
+  transform-origin: bottom;
+}
+
+#plant-bottom {
+  animation: wave 6s linear infinite alternate 0.4s;
+  transform-origin: bottom;
+}
+
+#b1,
+#b3,
+#b5,
+#b7,
+#b9,
+#b11 {
+  animation: bricks 2s linear infinite alternate;
+}
+
+#b2,
+#b4,
+#b6,
+#b8,
+#b10,
+#b12 {
+  animation: bricks 2s linear infinite alternate 1s;
+}
+
+#b13,
+#b15,
+#b17,
+#b19,
+#b21 {
+  animation: bricks 2s linear infinite alternate;
+}
+
+#b14,
+#b16,
+#b18,
+#b20 {
+  animation: bricks 2s linear infinite alternate 2s;
+}
+
+
+
+@keyframes bricks {
+  from {
+    fill: #ED6663;
+    opacity: 0.8;
+  }
+  to {
+    fill: #5335EC;
+    opacity: 0.4;
+  }
+}
+@keyframes wave {
+  0% {
+    transform: rotateZ(0deg) translateZ(-1px);
+  }
+  25% {
+    transform: rotateZ(-6deg) translateZ(-1px);
+  }
+  50% {
+    transform: rotateZ(-3deg) translateZ(-1px);
+  }
+  75% {
+    transform: rotateZ(3deg) translateZ(-1px);
+  }
+  100% {
+    transform: rotateZ(0deg) translateZ(-1px);
+  }
+}
+@keyframes person {
+  from {
+    transform: rotateZ(-0.6deg);
+  }
+  to {
+    transform: rotateZ(0.6deg);
+  }
+}
+@keyframes person-neck {
+  from {
+    transform: rotateZ(-0.3deg);
+  }
+  to {
+    transform: rotateZ(0.3deg);
+  }
+}
