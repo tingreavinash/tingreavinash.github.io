@@ -240,8 +240,9 @@ p.lead {
 }
 
 .person-svg-mobile{
-    max-width: 10rem !important;
-    z-index: -1;
+    /*max-width: 10rem !important;
+    z-index: -1;*/
+    display: none;
 
 }
 
