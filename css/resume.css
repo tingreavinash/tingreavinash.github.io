@@ -177,6 +177,7 @@ p.lead {
   font-size: 1.5rem;
   line-height: 3.5rem;
   margin-right: 1rem;
+  opacity: 0.8;
 }
 
 .social-icons a:last-child {
@@ -185,6 +186,7 @@ p.lead {
 
 .social-icons a:hover {
   background-color: var(--main-bg-color);
+  opacity: 1;
 }
 
 .dev-icons {
@@ -238,7 +240,9 @@ p.lead {
 }
 
 .person-svg-mobile{
-    display: none;
+    max-width: 10rem !important;
+    z-index: -1;
+
 }
 
 .mobile-image {
@@ -486,6 +490,7 @@ margin-bottom: 1rem;
         bottom: 0px;
         right: 0px;
         overflow: visible;
+
 }
 
 #person-1,
