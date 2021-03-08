@@ -177,7 +177,7 @@ p.lead {
   font-size: 1.5rem;
   line-height: 3.5rem;
   margin-right: 1rem;
-  opacity: 0.8;
+
 }
 
 .social-icons a:last-child {
@@ -186,7 +186,7 @@ p.lead {
 
 .social-icons a:hover {
   background-color: var(--main-bg-color);
-  opacity: 1;
+
 }
 
 .dev-icons {
