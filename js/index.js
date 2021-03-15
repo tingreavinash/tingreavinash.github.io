@@ -32,13 +32,13 @@ function populatedata(imgSrc, certUrl){
     console.log("model is opened");
   }
 
-/*$(window).on('load',function(){
-    $('#myModal').modal('show');
-});*/
 
 
 $(function () {
-    $('[data-toggle="tooltip"]').tooltip()
+    $('[data-toggle="tooltip"]').tooltip();
+    document.getElementById("yearsExperience").innerHTML = printYear();
+    document.getElementById("monthsExperience").innerHTML = printMonth();
+
 })
 
 
