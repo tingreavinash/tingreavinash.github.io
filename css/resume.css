@@ -450,7 +450,17 @@ a:hover, a:focus, a:active {
     box-shadow: 0 10px 20px 0 rgb(108 135 135 / 20%);
 }
 
-
+.bd-callout-warning {
+    border-left-color: #f0ad4e;
+}
+.bd-callout {
+    padding: 1.25rem;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+    border: 1px solid #eee;
+    border-left-width: .25rem;
+    border-radius: .25rem;
+}
 
 /* Custom Scrollbar using CSS */
 .custom-scrollbar-css {
