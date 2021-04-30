@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Roboto+Slab&display=swap');
+
 body {
-  font-family: 'Muli', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  /*font-family: 'Muli', Arial, sans-serif;*/
+  font-family: 'Roboto Slab', serif;
   padding-top: 54px;
   color: var(--text-color);
   background: var(--body-bg);
@@ -421,12 +424,17 @@ a:hover, a:focus, a:active {
 }
 
 .bd-callout {
-  padding: 1.25rem;
-  margin-top: 1.25rem;
+  padding: 2rem;
+  margin-top: 5rem;
   margin-bottom: 1.25rem;
   border: 1px solid #eee;
   border-left-width: .25rem;
-  border-radius: .25rem;
+  border-radius: .5rem;
+  background-color: #eeeeee;
+
+}
+.bd-callout > h3{
+  text-transform: none;
 }
 
 /* Custom Scrollbar using CSS */
@@ -559,3 +567,4 @@ a:hover, a:focus, a:active {
   }
 }
 
+/**************/
