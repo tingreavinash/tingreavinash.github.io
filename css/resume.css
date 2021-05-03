@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Roboto+Slab&&display=swap');
 
 body {
   /*font-family: 'Muli', Arial, sans-serif;*/
@@ -571,4 +571,53 @@ a:hover, a:focus, a:active {
 /**************/
 .project-tech-stack{
   font-size: large;
+}
+
+.section-heading{
+  /*border-bottom-style: solid;
+  border-bottom-width: 2px;*/
+}
+
+.section-heading::after{
+  display: block;
+    content: "";
+    width: 22.5%;
+    max-width: 130px;
+    height: 3px;
+    background: linear-gradient( 
+135deg
+ , #fa5656 0%, #f0cf2d 100%);
+    position: relative;
+    top: 12px;
+    left: 4px;
+}
+.contact-icons{
+  margin-top: 1rem;
+}
+.contact-icons > a > i{
+  margin-right: 0.5rem;
+}
+.contact-icons > a:hover{
+  transform: translateY(-0.3rem);
+  background-color: var(--primary-color);
+  box-shadow: var(--custom-shadow);
+}
+.contact-icons > a {
+  display: inline-block;
+  text-transform: none;
+  text-decoration: none;
+  background-color: var(--dark-grey);
+  color: white !important;
+  font-family: 'Merriweather';  
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 2.5rem;
+  margin-right: 1rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
 }
