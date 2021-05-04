@@ -602,6 +602,9 @@ a:hover, a:focus, a:active {
   background-color: var(--dark-grey);
   box-shadow: var(--custom-shadow);
 }
+.contact-icons > a:last-child{
+  margin-right: 0;
+}
 .contact-icons > a {
   display: inline-block;
   text-transform: none;
