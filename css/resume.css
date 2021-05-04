@@ -429,7 +429,8 @@ a:hover, a:focus, a:active {
   margin-bottom: 1.25rem;
   border: 1px solid #eee;
   border-left-width: .45rem;
-  border-radius: .5rem;
+  border-top-right-radius: .5rem;
+  border-bottom-right-radius: .5rem;
   background-color: #acd5913b;
 
 }
