@@ -373,7 +373,13 @@ section.resume-section .resume-item .resume-date {
 .bg-primary {
   background-color: var(--primary-color) !important;
 }
-
+.resume-date-box{
+  border-style: dashed;
+  border-width: 1px;
+  border-radius: 5px;
+  padding: 4px;
+  
+}
 .text-primary {
   color: var(--primary-color) !important;
 }
