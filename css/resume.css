@@ -430,9 +430,9 @@ a:hover, a:focus, a:active {
 }
 
 .bd-callout {
-  padding: 2rem;
-  margin-top: 5rem;
-  margin-bottom: 1.25rem;
+  padding: 1rem;
+  /*margin-top: 5rem;
+  margin-bottom: 1.25rem;*/
   border: 1px solid #eee;
   border-left-width: .45rem;
   border-top-right-radius: .5rem;
@@ -489,7 +489,8 @@ a:hover, a:focus, a:active {
   bottom: 0px;
   right: 0px;
   overflow: visible;
-  z-index: -1;
+  z-index: 9;
+  opacity: 0.4 !important;
 }
 
 #person-1, #person-2, #headphones, #face, #hair, #cap-1, #cap-3, #cap {
@@ -630,4 +631,10 @@ a:hover, a:focus, a:active {
   padding-right: 1rem;
   padding-left: 1rem;
   transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+}
+
+.summary-skills > .chip {
+  font-size: 15px !important;
+  line-height: 1.5rem;
+  margin: 2px;
 }
