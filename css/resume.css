@@ -416,13 +416,7 @@ a:hover, a:focus, a:active {
   border-top: 5px solid var(--warning);
   cursor: pointer;
   border-radius: 0px 0px 7px 7px;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.custom-card-style:hover {
-  transform: translateY(-3px);
-  top: -3px;
-  box-shadow: 0 10px 20px 0 rgb(108 135 135 / 20%);
+  box-shadow: 0 10px 15px 0 rgb(108 135 135 / 20%);
 }
 
 .bd-callout-warning {
@@ -637,4 +631,16 @@ a:hover, a:focus, a:active {
   font-size: 15px !important;
   line-height: 1.5rem;
   margin: 2px;
+}
+
+.experience-item{
+  border: 1px solid gray;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 1px;
+    text-align: left !important;
+}
+
+.card-deck > .card {
+  box-shadow: 0 10px 15px 0 rgb(108 135 135 / 20%);
 }
