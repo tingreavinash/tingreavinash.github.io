@@ -13,30 +13,6 @@ body {
   color: black;
 }
 
-.social-icons a {
-  display: inline-block;
-  height: 3.5rem;
-  width: 3.5rem;
-  background-color: #4950579e  ;
-  color: white !important;
-  border-radius: 100%;
-  text-align: center;
-  font-size: 1.5rem;
-  line-height: 3.5rem;
-  margin-right: 1rem;
-  transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
-}
-
-.social-icons a:last-child {
-  margin-right: 0;
-}
-
-.social-icons a:hover {
-  transform: translateY(-0.5rem);
-  background-color: var(--dark-grey);
-  box-shadow: var(--custom-shadow);
-}
-
 .card-title {
   text-transform: none;
 }
@@ -48,7 +24,7 @@ body {
   bottom: 0.5rem;
   right: 0.5rem;
   font-size: 2rem;
-  transition: color 0.3s, transform 0.3s;
+  transition: all 0.3s;
 }
 
 .cert-expand:hover {
@@ -57,13 +33,11 @@ body {
 }
 
 mark {
-  transition: background-color 0.1s;
-  
+  transition: all 0.1s;
 }
 
 mark:hover {
   background-color: var(--mark-background);
-  
 }
 
 .myBox {
@@ -85,7 +59,7 @@ mark:hover {
   line-height: 1.2rem;
   border-radius: 0.3rem;
   opacity: 1;
-  transition: background-color font-weight 0.2s;
+  transition: all 0.2s;
 }
 
 .chip-small {
@@ -101,7 +75,7 @@ mark:hover {
   color: black;
   opacity: 0.9;
   border: 1px solid black;
-  transition: background-color 0.2s, color 0.2s;
+  transition: all 0.2s;
 }
 
 .chip-border-primary:hover {
@@ -232,7 +206,7 @@ p.lead {
     max-height: 10rem;
     border: 0.5rem solid rgba(175, 172, 172, 0.2);
     border-radius: 15%!important;
-    transition: border 0.2s;
+    transition: all 0.2s;
   }
   .img-profile:hover {
     border: 0.2rem solid rgba(175, 172, 172, 0.2);
@@ -310,7 +284,7 @@ p.lead {
     max-width: 10rem;
     max-height: 10rem;
     border: 0.5rem solid rgba(255, 255, 255, 0.2);
-    transition: border filter 0.3s;
+    transition: all 0.3s;
   }
   #sideNav .navbar-brand .img-profile:hover {
     filter: brightness(110%);
@@ -416,6 +390,12 @@ a:hover, a:focus, a:active {
   border-top: 5px solid var(--warning);
   cursor: pointer;
   border-radius: 0px 0px 7px 7px;
+  
+}
+.custom-card-style,
+.card-deck > .card,
+.contact-icons > a,
+.social-icons > a {
   box-shadow: 0 10px 15px 0 rgb(108 135 135 / 20%);
 }
 
@@ -599,33 +579,60 @@ a:hover, a:focus, a:active {
 .contact-icons > a > i{
   margin-right: 0.5rem;
 }
-.contact-icons > a:hover{
-  transform: translateY(-0.3rem);
-  background-color: var(--dark-grey);
-  box-shadow: var(--custom-shadow);
-}
-.contact-icons > a:last-child{
+
+.contact-icons > a:last-child,
+.social-icons > a:last-child{
   margin-right: 0;
 }
+
+.social-icons > a {
+  height: 3.5rem;
+  width: 3.5rem;
+  font-size: 1.5rem;
+  line-height: 3.5rem;
+}
+
 .contact-icons > a {
-  display: inline-block;
   text-transform: none;
   text-decoration: none;
-  background-color: #4950579e ;
-  color: white !important;
   font-family: 'Merriweather';  
-  border-top-left-radius: 0.5rem;
-  border-top-right-radius: 0.5rem;
-  border-bottom-left-radius: 0.5rem;
-  border-bottom-right-radius: 0.5rem;
-  text-align: center;
   font-size: 1rem;
   line-height: 2.5rem;
-  margin-right: 1rem;
   padding-right: 1rem;
   padding-left: 1rem;
-  transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
 }
+
+
+.contact-icons > a,
+.social-icons > a{
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 10px;
+  display: inline-block;
+  background-color: #f8f9fa;
+  color: var(--dark-grey);
+  margin-right: 1rem;
+  transition: all 0.3s;
+  text-align: center;
+}
+.contact-icons > a:hover,
+.social-icons > a:hover{
+  background-color: var(--dark-grey);
+  box-shadow: 0 10px 15px 0 rgb(108 135 135 / 20%);
+  color: #f8f9fa;
+}
+
+/*
+.contact-icons:hover > a,
+.social-icons:hover > a{
+  transform: scale(0.95);
+  filter: blur(2px);
+}
+.contact-icons a:hover,
+.social-icons a:hover{
+  filter: blur(0px);
+  transform: scale(1);
+}
+*/
 
 .summary-skills > .chip {
   font-size: 15px !important;
@@ -635,12 +642,8 @@ a:hover, a:focus, a:active {
 
 .experience-item{
   border: 1px solid gray;
-    border-radius: 8px;
-    padding: 10px;
-    margin: 1px;
-    text-align: left !important;
-}
-
-.card-deck > .card {
-  box-shadow: 0 10px 15px 0 rgb(108 135 135 / 20%);
+  border-radius: 8px;
+  padding: 10px;
+  margin: 1px;
+  text-align: left !important;
 }
