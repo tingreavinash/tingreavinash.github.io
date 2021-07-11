@@ -175,7 +175,7 @@ p.lead {
     border-bottom-left-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem;
     text-align: center!important;
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(4px);
     background-color: #e64a19d9 !important;
   }
   .mobile-fit-docker {
