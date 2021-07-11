@@ -175,6 +175,8 @@ p.lead {
     border-bottom-left-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem;
     text-align: center!important;
+    backdrop-filter: blur(2px);
+    background-color: #e64a19d9 !important;
   }
   .mobile-fit-docker {
     width: 50% !important;
@@ -272,6 +274,7 @@ p.lead {
     flex-direction: column;
     width: 17rem;
     height: 100vh;
+    background-color: var(--primary-color) !important;
   }
   #sideNav .navbar-brand {
     display: -webkit-box;
@@ -344,9 +347,6 @@ section.resume-section .resume-item .resume-date {
   }
 }
 
-.bg-primary {
-  background-color: var(--primary-color) !important;
-}
 .resume-date-box{
   border-style: dashed;
   border-width: 1px;
