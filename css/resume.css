@@ -388,7 +388,7 @@ a:hover, a:focus, a:active {
 
 .custom-card-style {
   border-top: 5px solid var(--warning);
-  cursor: pointer;
+  
   border-radius: 0px 0px 7px 7px;
   
 }
@@ -646,4 +646,10 @@ a:hover, a:focus, a:active {
   padding: 10px;
   margin: 1px;
   text-align: left !important;
+}
+.certificate-btn{
+  right: 10px;
+  bottom: 10px;
+  width: 40px;
+  position: absolute;
 }
