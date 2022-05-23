@@ -1,3 +1,12 @@
+$(function() {
+    // this replaces document.ready
+    setTimeout(function() {
+      $("#preloader").fadeOut("slow", function() {
+        $(this).remove();
+      });
+    }, 1500);
+  });
+  
 function totalDays(){
 	var minutes = 1000*60;
     var hours = minutes*60;
