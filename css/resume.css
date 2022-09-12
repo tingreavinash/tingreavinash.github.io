@@ -723,3 +723,12 @@ a:hover, a:focus, a:active {
     transform: scale(1);
   }
 }
+
+.spot-award{
+  cursor: pointer;
+  color: #795548;
+}
+
+.drop-shadow{
+  filter: drop-shadow(3px 3px 3px rgb(0 0 0 / 0.4));
+}

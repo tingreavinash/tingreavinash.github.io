@@ -15,11 +15,9 @@ function totalDays(){
     var years = months*12;
 
     var d1=new Date(2017,10,3);//Remember, months are 0 based in JS
-	var d2=new Date();
-
-	var diff_days = Math.round((d2-d1)/days);
-
-	return diff_days;
+	  var d2=new Date();
+	  var diff_days = Math.round((d2-d1)/days);
+	  return diff_days;
 }
 function printYear(){
 	var diff_days = totalDays();
@@ -35,7 +33,11 @@ function printMonth(){
 	return res_month;
 }
 
-function populatedata(imgSrc, certUrl){
+function populatedata(imgSrc, certUrl, isValidateOptionHidden){
+    
+    if(isValidateOptionHidden == true){
+      document.getElementById("cert_url_field").style.display = "none";
+    }
     document.getElementById("cert_img_field").src = imgSrc;
     document.getElementById("cert_url_field").href = certUrl;
     console.log("model is opened");
