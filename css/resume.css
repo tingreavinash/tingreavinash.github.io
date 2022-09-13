@@ -726,9 +726,10 @@ a:hover, a:focus, a:active {
 
 .spot-award{
   cursor: pointer;
-  color: #795548;
+  color: #8E44AD;
+  filter: drop-shadow(1px 1px 2px rgb(0 0 0 / 0.4));
 }
 
 .drop-shadow{
-  filter: drop-shadow(3px 3px 3px rgb(0 0 0 / 0.4));
+  filter: drop-shadow(1px 1px 2px rgb(0 0 0 / 0.4));
 }
