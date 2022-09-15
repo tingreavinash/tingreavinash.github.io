@@ -9,9 +9,9 @@ $(function () {
 
 function getTotalExpInDays() {
   const noOfMilliSecInDay = 24 * 60 * 60 * 1000;
-  
+
   const careerStartDate = new Date(2017, 09, 3); //months are 0 based in JS
-  console.log("%cCareer started on: ",'background: #222; color: #bada55', careerStartDate);
+  console.log("%cCareer started on: ", 'background: #222; color: #bada55', careerStartDate);
 
   const todaysDate = new Date();
   const totalExperienceInDays = Math.round((todaysDate - careerStartDate) / noOfMilliSecInDay);
@@ -35,7 +35,7 @@ function calculateTotalExperience() {
     totalExp = yearsOfExperience + " years and " + monthsOfExperience + " months";
   }
 
-  console.log('%cTotal Experience: ','background: #222; color: #bada55', totalExp);
+  console.log('%cTotal Experience: ', 'background: #222; color: #bada55', totalExp);
 
   return totalExp;
 
