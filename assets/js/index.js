@@ -1,89 +1,70 @@
-$(function() {
-    // this replaces document.ready
-    setTimeout(function() {
-      $("#preloader").fadeOut("slow", function() {
-        $(this).remove();
-      });
-    }, 1500);
-  });
+$(function () {
+  // this replaces document.ready
+  setTimeout(function () {
+    $("#preloader").fadeOut("slow", function () {
+      $(this).remove();
+    });
+  }, 1500);
+});
+
+function getTotalExpInDays() {
+  const noOfMilliSecInDay = 24 * 60 * 60 * 1000;
   
-function totalDays(){
-	var minutes = 1000*60;
-    var hours = minutes*60;
-    var days = hours*24;
-    var months = days*30;
-    var years = months*12;
+  const careerStartDate = new Date(2017, 09, 3); //months are 0 based in JS
+  console.log("%cCareer started on: ",'background: #222; color: #bada55', careerStartDate);
 
-    var d1=new Date(2017,10,3);//Remember, months are 0 based in JS
-	  var d2=new Date();
-	  var diff_days = Math.round((d2-d1)/days);
-	  return diff_days;
-}
-function printYear(){
-	var diff_days = totalDays();
-	var res_year = Math.floor(diff_days/(30*12));
-	return res_year;
-
+  const todaysDate = new Date();
+  const totalExperienceInDays = Math.round((todaysDate - careerStartDate) / noOfMilliSecInDay);
+  return totalExperienceInDays;
 }
 
-function printMonth(){
-	var diff_days = totalDays();
-	var res_month = Math.floor((diff_days/30)%12)+1;
-	console.log('Total Experience: '+printYear()+' Years '+res_month+' Months');
-	return res_month;
-}
+function calculateTotalExperience() {
+  const totalExpInDays = getTotalExpInDays();
+  var totalExp;
+  const totalMonths = totalExpInDays / 30;
 
-function populatedata(imgSrc, certUrl, isValidateOptionHidden){
-    
-    if(isValidateOptionHidden == true){
-      document.getElementById("cert_url_field").style.display = "none";
-    }
-    document.getElementById("cert_img_field").src = imgSrc;
-    document.getElementById("cert_url_field").href = certUrl;
-    console.log("model is opened");
+  var yearsOfExperience = Math.floor(totalMonths / 12);
+  var monthsOfExperience = Math.floor(totalMonths % 12);
+
+  if (monthsOfExperience == 12) {
+    yearsOfExperience++;
+    totalExp = yearsOfExperience + " years";
+  } else if (monthsOfExperience == 0) {
+    totalExp = yearsOfExperience + " years";
+  } else {
+    totalExp = yearsOfExperience + " years and " + monthsOfExperience + " months";
   }
+
+  console.log('%cTotal Experience: ','background: #222; color: #bada55', totalExp);
+
+  return totalExp;
+
+}
+
+function fillCertificateData(imgSrc, certUrl, isValidateOptionHidden) {
+
+  if (isValidateOptionHidden == true) {
+    document.getElementById("cert_url_field").style.display = "none";
+  }
+  document.getElementById("cert_img_field").src = imgSrc;
+  document.getElementById("cert_url_field").href = certUrl;
+  console.log("Certificate modal opened");
+}
 
 
 
 $(function () {
-    $('[data-toggle="tooltip"]').tooltip();
-    document.getElementById("yearsExperience").innerHTML = printYear();
-    document.getElementById("monthsExperience").innerHTML = printMonth();
-
+  $('[data-toggle="tooltip"]').tooltip();
+  document.getElementById("totalExperience").innerHTML = calculateTotalExperience();
 })
 
 
-function showGreeting(){
-    var myDate = new Date();
-    var hrs = myDate.getHours();
-    var greet;
-
-    if (hrs < 12){
-    	greet = 'Good Morning! &#127773;';
-    	msg = 'Nothing is impossible when you put your mind, heart, soul, and sweat into it. Have a great morning!';
-    }
-    else if (hrs >= 12 && hrs <= 17){
-    	greet = 'Good Afternoon! &#127774;';
-    	msg = 'Every experience, No matter how bad it seems, holds within it a blessing of some kind. The goal is to find it.';
-    }
-    else if (hrs >= 17 && hrs <= 24){
-        greet = 'Good Evening! &#127770;';
-    	msg = 'Evenings are life\'s way of saying that you are closer to your dreams.';
-    }
-    document.getElementById('greetingMessage').innerHTML =
-        'Hey, <b>' + greet + '</b>';
-
-    document.getElementById('customWish').innerHTML =
-            '' + msg + '';
-
-}
-
 
 $(function () {
-    AOS.init({
-      duration: 1200,
-      easing: 'ease-in-out-back',
-      once: true
+  AOS.init({
+    duration: 1200,
+    easing: 'ease-in-out-back',
+    once: true
 
-    });
+  });
 })
