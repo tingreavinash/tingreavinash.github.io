@@ -42,7 +42,7 @@ function calculateTotalExperience() {
 }
 
 function fillCertificateData(imgSrc, certUrl, isValidateOptionHidden) {
-
+  console.log("isValidateOptionHidden: "+ isValidateOptionHidden);
   if (isValidateOptionHidden == true) {
     document.getElementById("cert_url_field").style.display = "none";
   }
@@ -51,10 +51,26 @@ function fillCertificateData(imgSrc, certUrl, isValidateOptionHidden) {
   console.log("Certificate modal opened");
 }
 
+function activateTooltips(){
+  var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-toggle="tooltip"]'))
+  var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl)
+  });
+}
 
+function renderLastUpdatedTime(){
+  fetch('https://api.github.com/repos/tingreavinash/tingreavinash.github.io/commits?per_page=1')
+  .then(res => res.json())
+  .then(res => {
+    const lastCommitDate = moment(res[0].commit.committer.date).format("dddd, MMM Do, YYYY");
+    const timeFromNow = moment(res[0].commit.committer.date).fromNow();
+    document.getElementById('last-update-time').innerHTML = "Updated "+ timeFromNow;
+  });
+}
 
 $(function () {
-  $('[data-toggle="tooltip"]').tooltip();
+  activateTooltips();
+  renderLastUpdatedTime();
   document.getElementById("totalExperience").innerHTML = calculateTotalExperience();
 })
 
