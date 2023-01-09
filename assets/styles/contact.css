@@ -45,7 +45,7 @@
 .contact-icons>a:hover,
 .social-icons>a:hover {
     background-color: var(--dark-grey);
-    box-shadow: 0 10px 15px 0 rgb(108 135 135 / 20%);
+    box-shadow: 5px 5px 6px 1px rgb(108 135 135 / 20%);
     color: #f8f9fa;
 }
 
