@@ -8,9 +8,9 @@
     bottom: 0;
     background-color: #000000;
     z-index: 99999;
-  }
-  
-  .loader {
+}
+
+.loader {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -24,9 +24,9 @@
     -webkit-transform: translateZ(0);
     -ms-transform: translateZ(0);
     transform: translateZ(0);
-  }
-  
-  .loader div {
+}
+
+.loader div {
     background-color: #ffffff;
     display: inline-block;
     float: none;
@@ -39,37 +39,37 @@
     border-radius: 50%;
     -webkit-animation: ballPulseDouble 2s ease-in-out infinite;
     animation: ballPulseDouble 2s ease-in-out infinite;
-  }
-  
-  .loader div:last-child {
+}
+
+.loader div:last-child {
     -webkit-animation-delay: -1s;
     animation-delay: -1s;
-  }
-  
-  @-webkit-keyframes ballPulseDouble {
-  
+}
+
+@-webkit-keyframes ballPulseDouble {
+
     0%,
     100% {
-      -webkit-transform: scale(0);
-      transform: scale(0);
+        -webkit-transform: scale(0);
+        transform: scale(0);
     }
-  
+
     50% {
-      -webkit-transform: scale(1);
-      transform: scale(1);
+        -webkit-transform: scale(1);
+        transform: scale(1);
     }
-  }
-  
-  @keyframes ballPulseDouble {
-  
+}
+
+@keyframes ballPulseDouble {
+
     0%,
     100% {
-      -webkit-transform: scale(0);
-      transform: scale(0);
+        -webkit-transform: scale(0);
+        transform: scale(0);
     }
-  
+
     50% {
-      -webkit-transform: scale(1);
-      transform: scale(1);
+        -webkit-transform: scale(1);
+        transform: scale(1);
     }
-  }
+}

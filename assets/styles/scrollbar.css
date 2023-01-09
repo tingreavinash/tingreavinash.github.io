@@ -2,26 +2,26 @@
 
 .custom-scrollbar-css {
     overflow-y: scroll;
-  }
-  
-  /* scrollbar width */
-  
-  .custom-scrollbar-css::-webkit-scrollbar {
+}
+
+/* scrollbar width */
+
+.custom-scrollbar-css::-webkit-scrollbar {
     width: 7px;
-  }
-  
-  /* scrollbar track */
-  
-  .custom-scrollbar-css::-webkit-scrollbar-track {
+}
+
+/* scrollbar track */
+
+.custom-scrollbar-css::-webkit-scrollbar-track {
     background: #eee;
-  }
-  
-  /* scrollbar handle */
-  
-  .custom-scrollbar-css::-webkit-scrollbar-thumb {
+}
+
+/* scrollbar handle */
+
+.custom-scrollbar-css::-webkit-scrollbar-thumb {
     border-radius: 3rem;
-    
+
     background-image: linear-gradient(to top, #f5af19 0%, #f12711 100%);
-  }
-  
-  /*-----------*/
+}
+
+/*-----------*/
