@@ -73,7 +73,7 @@ function fillCertificateDataCarousel(isValidateButtonVisible, ...certificateUrls
         if (i == 0) {
             carouselInners += "active";
         }
-        carouselInners += "'><img class='cert_img' src='" + certificateUrls[i] + "' alt='Certificate' /></div>";
+        carouselInners += "'><img class='cert-img' src='" + certificateUrls[i] + "' alt='Certificate' /></div>";
     }
 
     document.getElementById("carousel-inner").innerHTML = carouselInners;
