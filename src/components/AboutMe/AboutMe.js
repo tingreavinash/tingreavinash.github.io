@@ -33,7 +33,10 @@ function AboutMe(props) {
                     <div className="bd-callout" data-aos="fade-right">
                         <p className="lead text-justify">
                             <h3>Learn to fail, because fulfilling your potential must involve some failure!</h3>
-                            <em>- From <a href="https://medium.com/@Pathfinder.fyi/what-does-a-director-of-engineering-do-73054ce8eb4b" rel='noreferrer' target='_blank'>an article</a> by Priyanka Shahheydari (What does a Director of Engineering do?)</em>
+                            <em>- From <a href="https://medium.com/@Pathfinder.fyi/what-does-a-director-of-engineering-do-73054ce8eb4b" rel='noreferrer'
+                            data-event="references"
+                            data-label="Medium article by Priyanka"
+                            target='_blank'>an article</a> by Priyanka Shahheydari (What does a Director of Engineering do?)</em>
                         </p>
                     </div>
                 </div>

@@ -85,7 +85,10 @@ function Sidebar(props) {
         <div>
             <nav className="navbar custom-navbar navbar-expand-lg navbar-dark bg-primary fixed-top custom-scrollbar-css" id="sideNav">
 
-                <a type="button" className="navbar-brand js-scroll-trigger" href="#root" onClick={scroll.scrollToTop()}>
+                <a type="button" className="navbar-brand js-scroll-trigger" href="#root"
+                data-event="profile_photo"
+                data-label="/assets/images/profile.jpeg"
+                onClick={scroll.scrollToTop()}>
                     <span className="d-block d-lg-none" data-aos="fade-right">Avinash Tingre</span>
                     <span className="d-none d-lg-block" data-aos="fade-down">
                         <img alt="Avinash Tingre" className="img-fluid img-profile rounded-circle mx-auto mb-2" src={process.env.PUBLIC_URL + '/assets/images/profile.jpeg'} />
@@ -103,7 +106,9 @@ function Sidebar(props) {
                             spy={true}
                             smooth={true}
                             offset={-70}
-                            duration={500}>
+                            duration={500}
+                            data-event="nav_section"
+                            data-label="Summary">
                             Summary
                         </Link>
                         <Link
@@ -113,7 +118,9 @@ function Sidebar(props) {
                             spy={true}
                             smooth={true}
                             offset={-70}
-                            duration={500}>
+                            duration={500}
+                            data-event="nav_section"
+                            data-label="About Me">
                             About Me
                         </Link>
                         <Link
@@ -124,7 +131,9 @@ function Sidebar(props) {
                             spy={true}
                             smooth={true}
                             offset={-70}
-                            duration={500}>
+                            duration={500}
+                            data-event="nav_section"
+                            data-label="Experience">
                             Experience
                         </Link>
                         <Link
@@ -135,7 +144,9 @@ function Sidebar(props) {
                             spy={true}
                             smooth={true}
                             offset={-70}
-                            duration={500}>
+                            duration={500}
+                            data-event="nav_section"
+                            data-label="Skills">
                             Skills
                         </Link>
                         <Link
@@ -146,7 +157,9 @@ function Sidebar(props) {
                             spy={true}
                             smooth={true}
                             offset={-70}
-                            duration={500}>
+                            duration={500}
+                            data-event="nav_section"
+                            data-label="Certificates">
                             Certificates
                         </Link>
                         <Link
@@ -157,7 +170,9 @@ function Sidebar(props) {
                             spy={true}
                             smooth={true}
                             offset={-70}
-                            duration={500}>
+                            duration={500}
+                            data-event="nav_section"
+                            data-label="Projects">
                             Projects
                         </Link>
                         <Link
@@ -168,7 +183,9 @@ function Sidebar(props) {
                             spy={true}
                             smooth={true}
                             offset={-70}
-                            duration={500}>
+                            duration={500}
+                            data-event="nav_section"
+                            data-label="Education">
                             Education
                         </Link>
                         <Link
@@ -179,10 +196,15 @@ function Sidebar(props) {
                             spy={true}
                             smooth={true}
                             offset={-70}
-                            duration={500}>
+                            duration={500}
+                            data-event="nav_section"
+                            data-label="Resources">
                             Resources
                         </Link>
-                        {/* <a className='nav-link' href={resumeData.resourceType === "file" ? process.env.PUBLIC_URL + resumeData.url : resumeData.url} target="_blank" rel="noreferrer">
+                        {/* <a className='nav-link'
+                        data-event="resume"
+                        data-label={resumeData.url}
+                        href={resumeData.resourceType === "file" ? process.env.PUBLIC_URL + resumeData.url : resumeData.url} target="_blank" rel="noreferrer">
                             Resume <BiLinkExternal />
                         </a> */}
 
@@ -197,6 +219,8 @@ function Sidebar(props) {
                                 checked={checked}
                                 size={70}
                                 speed={1.3}
+                                data-event="toggle_dark_mode"
+                                data-label={checked ? `light` : `dark`}
                             />
                         </div>
 
