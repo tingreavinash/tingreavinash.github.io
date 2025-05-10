@@ -26,13 +26,18 @@ function Experience(props) {
                         return <div key={index}>
                             <div className="resume-item d-flex flex-column flex-md-row mb-5" data-aos="fade-right">
                                 <div className="resume-content me-auto">
-                                    <a href={item.companyUrl} target="_blank" rel="noreferrer">
+                                    <a href={item.companyUrl}
+                                    data-event="company"
+                                    data-label={item.companyUrl}
+                                    target="_blank" rel="noreferrer">
                                         <img src={process.env.PUBLIC_URL + item.companyLogo} alt="Company Logo" style={{ maxWidth: "8rem", marginBottom: "0.5rem" }} />
                                     </a>
                                     <h3 className="mb-0">{item.jobTitle}</h3>
                                     {item.awards.map((award, index) => {
                                         return <span key={index} className="spot-award" title={award.title} data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip"
-                                            onClick={() => {
+                                            data-event="award"
+                                            data-label={award.title}
+                                        onClick={() => {
                                                 setModalShow(true);
                                                 setCertificateImage([award.img]);
                                             }}>

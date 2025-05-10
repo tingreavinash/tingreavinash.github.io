@@ -24,13 +24,19 @@ function Projects(props) {
                                     return <div key={index} hidden></div>
                                 }
                                 return <div key={index} className="col-sm-6"  data-aos="fade-right">
-                                    <div className="custom-card-style card mobile-fit-cert">
+                                    <div className="custom-card-style card mobile-fit-cert"
+                                    data-event="project"
+                                    data-label={item.name}
+                                    >
                                         <div className="card-header bg-light">
                                             <div className="row align-items-center">
                                                 <div className="col-8">
                                                     <h4 className="card-title mb-0">{item.name}
                                                         {(item.url !== undefined && item.url !== null) &&
-                                                            <a href={item.url} className="badge badge-light " target="_blank" rel="noreferrer">
+                                                            <a href={item.url} 
+                                                            data-event="references"
+                                                            data-label={item.url}
+                                                            className="badge badge-light " target="_blank" rel="noreferrer">
                                                                 <span style={{color: 'black'}}> <GoLinkExternal /> </span>
                                                             </a>
                                                         }

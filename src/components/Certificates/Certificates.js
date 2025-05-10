@@ -30,7 +30,10 @@ function Certificates(props) {
                         })
                             .map((item, index) => {
                                 return <div key={index} className="col-sm-3">
-                                    <div className="custom-card-style card mobile-fit-cert" data-aos="fade-right"
+                                    <div className="custom-card-style card mobile-fit-cert"
+                                    data-event="certificate"
+                                    data-label={item.name}
+                                    data-aos="fade-right"
                                         onClick={() => {
                                             setModalShow(true);
                                             setCertificateImage(item.imgSrc);

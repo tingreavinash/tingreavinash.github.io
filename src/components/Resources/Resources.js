@@ -22,7 +22,10 @@ function Resources(props) {
                                             })
                                         }</td>
                                     <td>
-                                        <a href={ resource.resourceType === "file" ? process.env.PUBLIC_URL + resource.url : resource.url} target="_blank" rel="noreferrer">
+                                        <a href={ resource.resourceType === "file" ? process.env.PUBLIC_URL + resource.url : resource.url} target="_blank" rel="noreferrer"
+                                        data-event="references"
+                                        data-label={resource.url}
+                                        >
                                             <BiLinkExternal />
                                         </a>
                                     </td>

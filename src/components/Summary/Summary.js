@@ -33,7 +33,8 @@ function Summary(props) {
       >
         <div className="w-100">
           <div className="mobile-center-parent">
-            <div className="mobile-image" data-aos="fade-up">
+            <div className="mobile-image" data-event="profile_photo"
+                data-label="/assets/images/profile.jpeg" data-aos="fade-up">
               <img
                 alt="Avinash Tingre"
                 className="img-fluid img-profile rounded-circle mx-auto mb-2"
@@ -70,6 +71,8 @@ function Summary(props) {
                 target="_blank"
                 rel="noreferrer"
                 title="LinkedIn"
+                data-event="social_icon"
+                data-label="LinkedIn"
               >
                 <FaLinkedinIn />
               </a>
@@ -81,6 +84,8 @@ function Summary(props) {
                 target="_blank"
                 rel="noreferrer"
                 title="Medium"
+                data-event="social_icon"
+                data-label="Medium"
               >
                 <BsMedium />
               </a>
@@ -92,6 +97,8 @@ function Summary(props) {
                 target="_blank"
                 rel="noreferrer"
                 title="Github"
+                data-event="social_icon"
+                data-label="Github"
               >
                 <BsGithub />
               </a>
@@ -103,6 +110,8 @@ function Summary(props) {
                 target="_blank"
                 rel="noreferrer"
                 title="StackOverflow"
+                data-event="social_icon"
+                data-label="StackOverflow"
               >
                 <BsStackOverflow />
               </a>
@@ -116,6 +125,8 @@ function Summary(props) {
                 target="_blank"
                 rel="noreferrer"
                 title="Email"
+                data-event="contact_icon"
+                data-label="Email"
               >
                 <IoMail /> Drop a Mail
               </a>
