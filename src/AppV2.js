@@ -14,7 +14,7 @@ export default function AppV2() {
   };
 
   return (
-    <div className="min-h-screen bg-[#fcfcf9] text-slate-900 font-sans">
+    <div className="min-h-screen bg-[#fcfcf9] text-slate-900">
       <Navbar scrollTo={scrollToSection} />
       
       <main className="max-w-7xl mx-auto px-6 py-12 space-y-32">

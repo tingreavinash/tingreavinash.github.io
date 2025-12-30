@@ -7,7 +7,7 @@ export default function TechStack() {
     {
       title: "Core & Backend",
       icon: <Cpu className="text-blue-500" />,
-      skills: ["Java 17/21", "Spring Boot", "Spring Cloud", "Hibernate", "Node.js", "Python"],
+      skills: ["Java 11/17", "Spring Boot", "Spring Cloud", "Hibernate", "Python"],
     },
     {
       title: "Data & Messaging",
