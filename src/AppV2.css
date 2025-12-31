@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -11,7 +12,18 @@
 
 body {
     font-family: var(--font-jakarta);
-    background-color: #fdfdfc;
-    color: #1a1a1a;
 }
 
+.font-mono {
+    font-family: 'JetBrains Mono', monospace !important;
+}
+
+.heading-tight {
+    letter-spacing: -0.04em;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-slide-down { animation: slideDown 0.25s ease-out; }

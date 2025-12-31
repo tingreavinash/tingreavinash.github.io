@@ -6,6 +6,7 @@ import Metrics from "./components/V2/Metrics/Metrics";
 import Experience from "./components/V2/Experience/Experience";
 import TechStack from "./components/V2/TechStack/TechStack";
 import Footer from "./components/V2/Footer/Footer";
+import About from './components/V2/About/About';
 
 export default function AppV2() {
 
@@ -19,6 +20,7 @@ export default function AppV2() {
       
       <main className="max-w-7xl mx-auto px-6 py-12 space-y-32">
         <Hero scrollTo={scrollToSection}/>
+        <About />
         <Metrics/>
         <Experience/>
         <TechStack/>
