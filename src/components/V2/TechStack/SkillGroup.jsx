@@ -1,4 +1,3 @@
-import React from "react";
 import SkillBadge from "./SkillBadge";
 
 export default function SkillGroup({ title, icon, skills }) {

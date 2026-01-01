@@ -1,5 +1,4 @@
-import React from "react";
-import { Cpu, Database, Cloud } from "lucide-react";
+import { Cpu, Database, Cloud, TestTubeDiagonal  } from "lucide-react";
 import SkillGroup from "./SkillGroup";
 
 export default function TechStack() {
@@ -7,24 +6,29 @@ export default function TechStack() {
     {
       title: "Core & Backend",
       icon: <Cpu className="text-blue-500" />,
-      skills: ["Java 11/17", "Spring Boot", "Spring Cloud", "Hibernate", "Python"],
+      skills: ["Java", "Spring Boot", "Spring Cloud", "Spring Security", "Spring Batch", "Hibernate", "ReactJS"],
     },
     {
-      title: "Data & Messaging",
+      title: "Distributed Systems",
       icon: <Database className="text-emerald-500" />,
-      skills: ["PostgreSQL", "Redis", "Kafka", "ActiveMQ", "SQL", "NoSQL"],
+      skills: ["Redis", "Kafka", "ActiveMQ", "SQL", "NoSQL", "Microservices", "API Gateway"],
     },
     {
-      title: "Cloud & Infra",
+      title: "Cloud & DevOps",
       icon: <Cloud className="text-indigo-500" />,
-      skills: ["AWS", "PCF", "Kubernetes", "Docker", "Ansible", "Jenkins"],
+      skills: ["AWS", "PCF", "Kubernetes", "Docker", "Shell Script", "Ansible", "Jenkins"],
+    },
+    {
+      title: "Testing & Quality",
+      icon: <TestTubeDiagonal  className="text-green-500" />,
+      skills: ["JUnit", "Mockito", "WireMock", "Karate Framework", "PACT (Contract Testing)"],
     },
   ];
 
   return (
     <section id="stack" className="space-y-16 pb-24">
       <div className="text-center space-y-4">
-        <h2 className="text-4xl font-bold text-slate-900">Technical Arsenal</h2>
+        <h2 className="text-4xl font-bold text-slate-900">Technical Skills</h2>
         <p className="text-slate-500 max-w-xl mx-auto">
           Tools and frameworks used to architect high-performance distributed systems.
         </p>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Terminal } from "lucide-react";
 import { experienceData } from "../data/experience";
 
@@ -31,11 +31,11 @@ export default function Experience() {
         </div>
         <div className="lg:col-span-3">
           <div className="bg-white p-8 md:p-12 rounded-[3rem] border border-slate-100 shadow-sm min-h-[500px]">
-            <div className="flex items-center gap-4">
+            <div className="sm:flex items-center gap-4">
               <img
                 src={current.logo}
                 alt={current.company}
-                className="h-14 max-w-20 object-contain rounded-lg bg-white p-2 shadow-sm"
+                className="h-14 max-w-32 sm:max-w-20 object-contain rounded-lg bg-white"
               />
               <div>
                 <h3 className="text-3xl font-extrabold text-slate-900">

@@ -28,18 +28,7 @@ function Education(props) {
                         <span className="resume-date-box text-primary">Feb 2013</span>
                     </div>
                 </div>
-                {/* <div className="resume-item d-flex flex-column flex-md-row" data-aos="fade-right" >
-                  <div className="resume-content me-auto">
-                      <h3 className="mb-0">SSC</h3 >
-                      <p>
-                          Shri Sant Gadge Maharaj High School, Loha, Nanded, MH, India.
-                          
-                      </p>
-                  </div>
-                  <div className="resume-date text-md-end"  data-aos="fade-up">
-                      <span className="resume-date-box text-primary">Mar 2011</span>
-                  </div>
-                  </div> */}
+                
             </div>
         </section>
     </div>

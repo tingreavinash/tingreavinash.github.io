@@ -1,22 +1,23 @@
-import React from "react";
-import { Terminal, Github, Award, Zap, Sparkles, Code2 } from "lucide-react";
+import { Award, Zap, Sparkles, Code2 } from "lucide-react";
 
 export default function Hero({ scrollTo }) {
   return (
       <section id="hero" className="flex flex-col md:flex-row items-center gap-16 pt-8">
+        
         <div className="flex-1 space-y-8 text-center md:text-left">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-50 border border-orange-100 text-orange-700 text-xs font-bold uppercase tracking-wider">
-            <span class="relative flex size-2">
+          <div className="inline-flex items-center gap-2 px-3 py-2 rounded-full bg-orange-50 border border-orange-100 text-orange-700 text-xs font-bold uppercase tracking-wider">
+            <span class="relative flex size-2.5">
               <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
-              <span class="relative inline-flex size-2 rounded-full bg-green-500"></span>
+              <span class="relative inline-flex size-2.5 rounded-full bg-green-500"></span>
             </span>
             Senior Software Engineer @ Mastercard
           </div>
-          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight leading-tight">
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-slate-900 to-slate-500">
-              Avinash Tingre
-            </span>
-          </h1>
+          <h1 className="text-5xl md:text-7xl font-extrabold text-slate-900 leading-tight heading-tight">
+              Scaling Systems.<br/>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-900 to-blue-600 font-extrabold">
+                Automating Growth.
+              </span>
+            </h1>
 
 
           <p className="text-xl text-slate-600 max-w-xl mt-4">
@@ -26,14 +27,14 @@ export default function Hero({ scrollTo }) {
 
             <button
               onClick={() => scrollTo && scrollTo("experience")}
-              className="px-8 py-4 bg-blue-600 text-white rounded-2xl text-lg font-bold shadow-lg 
+              className="px-5 py-2 sm:px-8 sm:py-4  bg-blue-600 text-white rounded-2xl text-lg font-bold shadow-lg 
                        shadow-blue-200 hover:bg-blue-700 transition-all active:scale-95">
               View Experience
             </button>
 
             <a
               href="mailto:tingre.avinash@gmail.com"
-              className="px-8 py-4 bg-white border border-slate-200 text-slate-700 rounded-2xl 
+              className="px-5 py-2 sm:px-8 sm:py-4 bg-white border border-slate-200 text-slate-700 rounded-2xl 
                        text-lg font-bold hover:bg-slate-50 transition-all shadow-sm">
               Contact Me
             </a>

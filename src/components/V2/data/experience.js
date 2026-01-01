@@ -6,10 +6,13 @@ export const experienceData = [
     role: 'Senior Software Engineer',
     period: 'Feb 2024 - Present',
     highlights: [
-      'Leading **Authentication services** for Mastercard Checkout Solution (MACS), implementing 3DS and proprietary protocols.',
-      'Developed **CodeSentinel**, an Auto PR Reviewer that utilizes static analysis to provide real-time code feedback.',
-      'Optimized test suites by building a **WireMock Extension**, identifying and deleting **5,000+ unused stubs**, drastically reducing CI/CD overhead.',
-      'Engineered the **Payload Decryption Service** (Web UI), significantly improving cross-team developer efficiency.'
+      'Engineered authentication services for **Mastercard Checkout (MACS)** including 3DS + proprietary flows for **global transactions @ 99.99% uptime**.',
+      'Architected **CodeSentinel**, an automated PR reviewer bot using static analysis, reducing review time by **35%**.',
+      'Integrated multi-tier **Redis caching**, reducing API latency by **25%** for high-traffic payment flows.',
+      'Developed a **WireMock extension** that identified/purged **5000+ unused stubs**, accelerating test execution by **30%**.',
+      'Implemented **PACT contract testing**, preventing **20% more integration failures pre-release**.',
+      'Automated **PCF config + environment variables**, cutting configuration errors by **40%**.',
+
     ],
     stack: ['Java 17', 'Spring Boot', 'Redis', 'PCF', 'Karate Framework', 'PACT']
   },
@@ -20,9 +23,9 @@ export const experienceData = [
     role: 'Senior Software Engineer',
     period: '2022 - 2024',
     highlights: [
-      'Developed an **Audit Logging Framework** with Spring Boot, enabling granular API tracking and security compliance.',
+      'Built a **centralized Audit Logging framework** with Spring AOP for secure realtime API tracing.',
       'Integrated multiple microservices for the Click-To-Pay program, implementing custom caching for sub-100ms performance.',
-      'Developed the **Checkout Toolkit Web UI** using ReactJS and Spring Boot for operational streamlining.'
+      'Developed **Checkout Toolkit WebUI** (React+Spring), improving debugging throughput by **50%**.'
     ],
     stack: ['Java 11', 'Spring Boot', 'ReactJS', 'Redis', 'PostgreSQL']
   },
@@ -33,9 +36,8 @@ export const experienceData = [
     role: 'Software Engineer',
     period: '2021 – 2022',
     highlights: [
-      'Built a **data extraction automation pipeline** using JSON parsing + spreadsheet integration, reducing manual NLP dataset processing time by **~40%** and accelerating annotation throughput.',
-      'Delivered **3 NLP feature modules ahead of sprint schedules** by collaborating with cross-functional teams and driving Agile delivery with clear iteration goals.',
-      'Contributed to automation and tooling improvements, enabling faster experimentation cycles for language model evaluation.',
+      'Automated NLP data extraction using JSON + spreadsheet integration, reducing processing time by **40%**.',
+      'Delivered **3 NLP features ahead of schedule** through Agile collaboration and rapid iteration.'
     ],
     stack: ['Java', 'Python', 'JSON', 'NLP', 'Agile', 'Scrum']
   },
@@ -47,9 +49,9 @@ export const experienceData = [
     role: 'Software Developer',
     period: '2017 - 2021',
     highlights: [
-      'Automated Linux deployment tasks with **Ansible & Shell**, achieving a **50% reduction in deployment time** and 30% fewer manual errors.',
+      'Automated deployment workflows using **Ansible + Shell**, reducing deployment effort by **50% & error rate by 30%**.',
       'Built a high-performance Spring Boot/Hibernate service for critical data transmission between DNS management apps.',
-      'Created a **Leave Management System** with automated approval workflows, reducing HR manual overhead.'
+      'Built internal **Leave Management Workflow System** used by **200+ employees**, cutting admin overhead.'
     ],
     stack: ['Java', 'Hibernate', 'Ansible', 'Shell Scripting', 'ReactJS']
   }
