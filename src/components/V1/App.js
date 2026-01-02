@@ -1,13 +1,13 @@
 import './App.css';
-import AboutMe from './components/AboutMe/AboutMe';
-import Experience from './components/Experience/Experience';
-import Sidebar from './components/Sidebar/Sidebar';
-import Skills from './components/Skills/Skills';
-import Summary from './components/Summary/Summary';
-import Certificates from './components/Certificates/Certificates'
-import Projects from './components/Projects/Projects';
-import Education from './components/Education/Education';
-import Resources from './components/Resources/Resources';
+import AboutMe from './AboutMe/AboutMe';
+import Experience from './Experience/Experience';
+import Sidebar from './Sidebar/Sidebar';
+import Skills from './Skills/Skills';
+import Summary from './Summary/Summary';
+import Certificates from './Certificates/Certificates'
+import Projects from './Projects/Projects';
+import Education from './Education/Education';
+import Resources from './Resources/Resources';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect, useState } from 'react'

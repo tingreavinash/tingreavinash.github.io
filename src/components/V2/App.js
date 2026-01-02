@@ -1,13 +1,13 @@
-import './AppV2.css';
-import Navbar from "./components/V2/Navbar/Navbar";
-import Hero from "./components/V2/Hero/Hero";
-import Metrics from "./components/V2/Metrics/Metrics";
-import Experience from "./components/V2/Experience/Experience";
-import TechStack from "./components/V2/TechStack/TechStack";
-import Footer from "./components/V2/Footer/Footer";
-import About from './components/V2/About/About';
+import './App.css';
+import Navbar from "./Navbar/Navbar";
+import Hero from "./Hero/Hero";
+import Metrics from "./Metrics/Metrics";
+import Experience from "./Experience/Experience";
+import TechStack from "./TechStack/TechStack";
+import Footer from "./Footer/Footer";
+import About from './About/About';
 
-export default function AppV2() {
+export default function App() {
 
   const scrollToSection = (id) => {
     const section = document.getElementById(id);
