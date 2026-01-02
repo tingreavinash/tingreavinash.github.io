@@ -1,1 +1,28 @@
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 200 200"><rect width="200" height="200" fill="url('#gradient')"></rect><defs><linearGradient id="gradient" gradientTransform="rotate(33 0.5 0.5)"><stop offset="0%" stop-color="#000000"></stop><stop offset="100%" stop-color="#0a1727"></stop></linearGradient></defs><g><g fill="#ffffff" transform="matrix(5.9069142631371,0,0,5.9069142631371,27.16864258392627,141.99753606604853)" stroke="#241e3a" stroke-width="0"><path d="M9.98 0L9.15-2.66L4.45-2.66L3.63 0L-0.03 0L5.19-14.22L8.41-14.22L13.66 0L9.98 0ZM6.80-10.23L5.27-5.30L8.33-5.30L6.80-10.23ZM24.69-14.22L24.69-11.57L20.42-11.57L20.42 0L16.99 0L16.99-11.57L12.80-11.57L12.80-14.22L24.69-14.22Z"></path></g></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg"
+     version="1.1"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="0 0 200 200">
+
+  <rect width="200"
+        height="200"
+        rx="60"
+        ry="60"
+        fill="url(#gradient)" />
+
+  <defs>
+    <linearGradient id="gradient" gradientTransform="rotate(33 0.5 0.5)">
+      <stop offset="0%" stop-color="#000000" />
+      <stop offset="100%" stop-color="#0a1727" />
+    </linearGradient>
+  </defs>
+
+  <g>
+    <g fill="#ffffff"
+       transform="matrix(5.9069142631371,0,0,5.9069142631371,27.16864258392627,141.99753606604853)"
+       stroke="#241e3a"
+       stroke-width="0">
+      <path d="M9.98 0L9.15-2.66L4.45-2.66L3.63 0L-0.03 0L5.19-14.22L8.41-14.22L13.66 0L9.98 0ZM6.80-10.23L5.27-5.30L8.33-5.30L6.80-10.23ZM24.69-14.22L24.69-11.57L20.42-11.57L20.42 0L16.99 0L16.99-11.57L12.80-11.57L12.80-14.22L24.69-14.22Z" />
+    </g>
+  </g>
+
+</svg>
