@@ -47,13 +47,13 @@ export default function Navbar({ scrollTo }) {
         {/* Desktop Menu */}
         <div className="hidden md:flex gap-8 text-sm font-semibold text-slate-600">
           {navItems.map((item, i) => (
-              <button
-                key={item.key}
-                onClick={() => handleNav(item.key)}
-              >
-                {item.label}
-              </button>
-            ))}
+            <button
+              key={item.key}
+              onClick={() => handleNav(item.key)}
+            >
+              {item.label}
+            </button>
+          ))}
         </div>
 
         {/* Desktop CTA */}
@@ -81,20 +81,17 @@ export default function Navbar({ scrollTo }) {
 
       {/* Mobile Dropdown */}
       <div
-        className={`md:hidden fixed top-24 left-0 right-0 z-50 transform transition-all duration-300 
-        ${open ? "translate-y-0 opacity-100 " : "-translate-y-5 opacity-0 pointer-events-none"}`}
+        className={`md:hidden fixed top-20 left-0 right-0 z-50 transform transition-all duration-300 
+  ${open ? "translate-y-0 opacity-100" : "-translate-y-5 opacity-0 pointer-events-none"}`}
       >
-        <div className="mx-4 backdrop-blur-xl bg-white/80 border-slate-200  border rounded-3xl shadow-xl overflow-hidden">
+        {/* The 'mx-4' and 'rounded-3xl' are great, but the background MUST be transparent */}
+        <div className="mx-4 mt-4 backdrop-blur-xl border bg-white/70 border-white/40 rounded-3xl shadow-2xl overflow-hidden">
           <div className="flex flex-col text-base font-semibold text-slate-700">
-
-
-
-            {navItems.map((item, i) => (
+            {navItems.map((item) => (
               <button
                 key={item.key}
                 onClick={() => handleNav(item.key)}
-                className={`py-4 px-6 text-left hover:bg-white/60 
-    transition-all duration-200 delay-[${i * 40}ms]`}
+                className="py-4 px-6 text-left border-b backdrop-blur-xl bg-white/70 z-50 border-slate-200/30 last:border-none active:bg-white/40 transition-all duration-200"
               >
                 {item.label}
               </button>
@@ -102,7 +99,7 @@ export default function Navbar({ scrollTo }) {
 
             <a
               href="mailto:tingre.avinash@gmail.com"
-              className="py-4 px-6 bg-slate-900 text-white text-center font-bold text-base hover:bg-slate-800 transition-all"
+              className="py-5 px-6 bg-slate-900/90 text-white text-center font-bold text-base hover:bg-slate-900 transition-all"
             >
               Hire Me
             </a>
