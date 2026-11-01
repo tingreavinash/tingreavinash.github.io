@@ -1,103 +1,295 @@
-import { Bar, Line } from "react-chartjs-2";
-import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, PointElement, LineElement, Tooltip, Legend } from "chart.js";
-import { Sparkles, Zap, Search } from "lucide-react";
+import { Bar } from "react-chartjs-2";
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Tooltip,
+  Legend,
+} from "chart.js";
+import { Zap, ShieldCheck, GitBranch, Terminal } from "lucide-react";
+import { useTheme } from "../hooks/useTheme";
+import SectionHeading from "../ui/SectionHeading";
+import Reveal from "../ui/Reveal";
 
-ChartJS.register(CategoryScale, LinearScale, BarElement, PointElement, LineElement, Tooltip, Legend);
+// Register only the chart elements currently used
+ChartJS.register(CategoryScale, LinearScale, BarElement, Tooltip, Legend);
 
-const prReviewData = {
-  labels: ['Before CodeSentinel', 'After CodeSentinel'],
-  datasets: [{
-    label: 'Avg. Hours to First Review',
-    data: [8, 1],
-    backgroundColor: ['#94a3b8', '#3b82f6'],
-    borderRadius: 8,
-  }]
-};
+function buildOptions(unit, dark) {
+  const textColor = dark ? "#94a3b8" : "#64748b";
+  const gridColor = dark ? "rgba(51, 65, 85, 0.4)" : "rgba(226, 232, 240, 0.7)";
+  const tooltipBg = dark ? "#1e293b" : "#ffffff";
+  const tooltipTitle = dark ? "#f8fafc" : "#0f172a";
+  const tooltipBorder = dark ? "#334155" : "#e2e8f0";
+  const legendColor = dark ? "#cbd5e1" : "#475569";
 
-const toolkitEfficiencyData = {
-  labels: ['Manual Debugging', 'Checkout Toolkit'],
-  datasets: [{
-    label: 'Task Completion Time (Mins)',
-    data: [15, 1],
-    backgroundColor: ['#f43f5e', '#10b981'],
-    borderRadius: 8,
-  }]
-};
+  return {
+    responsive: true,
+    maintainAspectRatio: false,
+    animation: {
+      duration: 600,
+    },
+    plugins: {
+      legend: {
+        position: "bottom",
+        labels: {
+          color: legendColor,
+          font: { family: "'Inter', sans-serif", weight: 600, size: 11 },
+          boxWidth: 12,
+          padding: 10,
+        },
+      },
+      tooltip: {
+        backgroundColor: tooltipBg,
+        titleColor: tooltipTitle,
+        bodyColor: textColor,
+        borderColor: tooltipBorder,
+        borderWidth: 1,
+        padding: 10,
+        cornerRadius: 8,
+        callbacks: {
+          label: (ctx) => `${ctx.dataset.label || ""}: ${ctx.raw}${unit ? ` ${unit}` : ""}`,
+        },
+      },
+    },
+    scales: {
+      y: {
+        beginAtZero: true,
+        ticks: {
+          color: textColor,
+          font: { size: 11 },
+          callback: (v) => `${v}${unit ? ` ${unit}` : ""}`,
+        },
+        grid: {
+          color: gridColor,
+        },
+      },
+      x: {
+        ticks: {
+          color: textColor,
+          font: { size: 11 },
+        },
+        grid: {
+          display: false,
+        },
+      },
+    },
+  };
+}
 
-const hotfixSearchImpact = {
-  labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
-  datasets: [{
-    label: 'Manual Search Tickets',
-    data: [85, 78, 40, 12, 5, 2],
-    borderColor: '#3b82f6',
-    tension: 0.4,
-    fill: true,
-    backgroundColor: 'rgba(59, 130, 246, 0.1)'
-  }]
-};
-
-const chartOptions = {
-  responsive: true,
-  maintainAspectRatio: false,
-  plugins: {
-    legend: {
-      position: 'bottom',
-      labels: { font: { family: "'Plus Jakarta Sans', sans-serif", weight: 600 } }
-    }
-  }
-};
-
-
+function buildMetrics(muted) {
+  return {
+    latency: {
+      labels: ["Update API", "Lookup API"],
+      datasets: [
+        {
+          label: "Baseline",
+          data: [40, 16],
+          backgroundColor: muted,
+          borderRadius: 6,
+        },
+        {
+          label: "Optimized",
+          data: [20, 9],
+          backgroundColor: "#2563eb",
+          borderRadius: 6,
+        },
+      ],
+    },
+    coverage: {
+      labels: ["Unit Test Coverage"],
+      datasets: [
+        {
+          label: "Previous",
+          data: [75],
+          backgroundColor: muted,
+          borderRadius: 6,
+        },
+        {
+          label: "Current Standard",
+          data: [90],
+          backgroundColor: "#10b981",
+          borderRadius: 6,
+        },
+      ],
+    },
+    branches: {
+      labels: ["Stale Branches (7 Repos)"],
+      datasets: [
+        {
+          label: "Before Cleanup",
+          data: [1013],
+          backgroundColor: muted,
+          borderRadius: 6,
+        },
+        {
+          label: "After Cleanup",
+          data: [293],
+          backgroundColor: "#8b5cf6",
+          borderRadius: 6,
+        },
+      ],
+    },
+    deployment: {
+      labels: ["Deployment Time", "Failure Rate"],
+      datasets: [
+        {
+          label: "Manual Baseline",
+          data: [100, 100],
+          backgroundColor: muted,
+          borderRadius: 6,
+        },
+        {
+          label: "Ansible Automated",
+          data: [50, 70],
+          backgroundColor: "#f59e0b",
+          borderRadius: 6,
+        },
+      ],
+    },
+  };
+}
 
 export default function Metrics() {
+  const { theme } = useTheme();
+  const dark = theme === "dark";
+  const muted = dark ? "#334155" : "#cbd5e1";
+
+  const metrics = buildMetrics(muted);
+
   return (
     <section id="metrics" className="space-y-12">
-      <div className="text-center max-w-2xl mx-auto space-y-4">
-        <h2 className="text-4xl font-bold tracking-tight text-slate-900">Engineering Impact</h2>
-        <p className="text-slate-500 text-lg">A data-driven look at how my technical solutions improved project health.</p>
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {/* Chart 1 - PR Reviewer */}
-        <div className="bg-white p-8 rounded-[2rem] border border-slate-100 shadow-sm hover:shadow-lg transition-shadow space-y-6 flex flex-col">
-          <div className="flex items-center gap-3">
-            <div className="p-2 bg-blue-50 rounded-lg text-blue-600"><Sparkles size={20}/></div>
-            <h4 className="font-bold text-slate-800">Auto PR Reviewer</h4>
-          </div>
-          <div className="flex-1 h-48 relative">
-            <Bar data={prReviewData} options={chartOptions}/>
-          </div>
-          <p className="text-xs text-slate-500 font-medium leading-relaxed">
-            Cut first-review wait time from <strong>14 hrs → 5 mins feedback</strong>. Eliminated repetitive manual checks using static analysis automation.
-          </p>
-        </div>
+      <SectionHeading
+        eyebrow="Measurable impact"
+        title="Engineering Telemetry & Results"
+        subtitle="Data-backed outcomes across payment directory latency, test coverage, repository hygiene, and deployment velocity."
+        align="left"
+      />
 
-        {/* Chart 2 - Checkout Toolkit */}
-        <div className="bg-white p-8 rounded-[2rem] border border-slate-100 shadow-sm hover:shadow-lg transition-shadow space-y-6 flex flex-col">
-          <div className="flex items-center gap-3">
-            <div className="p-2 bg-emerald-50 rounded-lg text-emerald-600"><Zap size={20}/></div>
-            <h4 className="font-bold text-slate-800">Checkout Toolkit</h4>
-          </div>
-          <div className="flex-1 h-48 relative">
-            <Bar data={toolkitEfficiencyData} options={chartOptions}/>
-          </div>
-          <p className="text-xs text-slate-500 font-medium leading-relaxed">
-            Accelerated encrypted payload debugging <strong>15 mins → 1 min</strong>. Boosted developer productivity & reduced dependency on support.
-          </p>
-        </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {/* Metric 1: API Latency */}
+        <Reveal delay={100}>
+          <div className="bg-white dark:bg-slate-900/80 p-6 sm:p-8 rounded-3xl border border-slate-200/80 dark:border-slate-800 shadow-sm flex flex-col justify-between space-y-5 h-full">
+            <div className="space-y-1.5">
+              <div className="flex items-center gap-2.5">
+                <div className="p-2 rounded-xl bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-blue-400">
+                  <Zap size={18} />
+                </div>
+                <h4 className="text-base sm:text-lg font-bold text-slate-900 dark:text-white">
+                  Directory 2.0 API Latency (p90)
+                </h4>
+              </div>
+              <p className="text-xs text-slate-500 dark:text-slate-400">
+                Update API cut by 50% (40 → 20 ms); Lookup API cut to 9 ms
+              </p>
+            </div>
 
-        {/* Chart 3 - Hotfix Search */}
-        <div className="bg-white p-8 rounded-[2rem] border border-slate-100 shadow-sm hover:shadow-lg transition-shadow space-y-6 flex flex-col">
-          <div className="flex items-center gap-3">
-            <div className="p-2 bg-indigo-50 rounded-lg text-indigo-600"><Search size={20}/></div>
-            <h4 className="font-bold text-slate-800">Hotfix Intelligence</h4>
+            <div className="h-52 relative">
+              <Bar
+                key={`latency-${theme}`}
+                data={metrics.latency}
+                options={buildOptions("ms", dark)}
+              />
+            </div>
+
+            <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed bg-slate-50 dark:bg-slate-800/60 p-4 rounded-2xl border border-slate-100 dark:border-slate-700/60">
+              <strong>Halved p90 latency</strong> on Directory 2.0 update API (<strong>40 ms → 20 ms</strong>) and lookup API (<strong>16 ms → 9 ms</strong>) by executing parallel decryption, removing unused token decrypts, replacing N+1 queries with batched reads, and bounding fan-out.
+            </p>
           </div>
-          <div className="flex-1 h-48 relative">
-            <Line data={hotfixSearchImpact} options={chartOptions}/>
+        </Reveal>
+
+        {/* Metric 2: Unit Test Coverage */}
+        <Reveal delay={200}>
+          <div className="bg-white dark:bg-slate-900/80 p-6 sm:p-8 rounded-3xl border border-slate-200/80 dark:border-slate-800 shadow-sm flex flex-col justify-between space-y-5 h-full">
+            <div className="space-y-1.5">
+              <div className="flex items-center gap-2.5">
+                <div className="p-2 rounded-xl bg-emerald-50 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400">
+                  <ShieldCheck size={18} />
+                </div>
+                <h4 className="text-base sm:text-lg font-bold text-slate-900 dark:text-white">
+                  Unit Test Coverage Across 7 Repos
+                </h4>
+              </div>
+              <p className="text-xs text-slate-500 dark:text-slate-400">
+                Comprehensive JUnit 5 & Karate test rigor
+              </p>
+            </div>
+
+            <div className="h-52 relative">
+              <Bar
+                key={`coverage-${theme}`}
+                data={metrics.coverage}
+                options={buildOptions("%", dark)}
+              />
+            </div>
+
+            <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed bg-slate-50 dark:bg-slate-800/60 p-4 rounded-2xl border border-slate-100 dark:border-slate-700/60">
+              Raised unit test coverage from <strong>75% → 90%</strong> across 7 core services with squash merges, Karate integration coverage, and serving as primary reviewer on 3 repositories.
+            </p>
           </div>
-          <p className="text-xs text-slate-500 font-medium leading-relaxed">
-            Migrated Excel-based tracking to searchable DB store with Web UI. Achieved <strong>~90% reduction</strong> in lookup time for legacy hotfix records.
-          </p>
-        </div>
+        </Reveal>
+
+        {/* Metric 3: Repository Hygiene */}
+        <Reveal delay={300}>
+          <div className="bg-white dark:bg-slate-900/80 p-6 sm:p-8 rounded-3xl border border-slate-200/80 dark:border-slate-800 shadow-sm flex flex-col justify-between space-y-5 h-full">
+            <div className="space-y-1.5">
+              <div className="flex items-center gap-2.5">
+                <div className="p-2 rounded-xl bg-purple-50 dark:bg-purple-950/60 text-purple-600 dark:text-purple-400">
+                  <GitBranch size={18} />
+                </div>
+                <h4 className="text-base sm:text-lg font-bold text-slate-900 dark:text-white">
+                  Repository Hygiene & Branch Pruning
+                </h4>
+              </div>
+              <p className="text-xs text-slate-500 dark:text-slate-400">
+                Purged 720 of 1,013 stale branches across 7 repositories (71%)
+              </p>
+            </div>
+
+            <div className="h-52 relative">
+              <Bar
+                key={`branches-${theme}`}
+                data={metrics.branches}
+                options={buildOptions("", dark)}
+              />
+            </div>
+
+            <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed bg-slate-50 dark:bg-slate-800/60 p-4 rounded-2xl border border-slate-100 dark:border-slate-700/60">
+              Cleaned <strong>720 of 1,013 stale branches (71%)</strong> across 7 payment repositories, eliminating dead code paths and enforcing clean trunk-based branch lifecycles.
+            </p>
+          </div>
+        </Reveal>
+
+        {/* Metric 4: Deployment Automation */}
+        <Reveal delay={400}>
+          <div className="bg-white dark:bg-slate-900/80 p-6 sm:p-8 rounded-3xl border border-slate-200/80 dark:border-slate-800 shadow-sm flex flex-col justify-between space-y-5 h-full">
+            <div className="space-y-1.5">
+              <div className="flex items-center gap-2.5">
+                <div className="p-2 rounded-xl bg-amber-50 dark:bg-amber-950/60 text-amber-600 dark:text-amber-400">
+                  <Terminal size={18} />
+                </div>
+                <h4 className="text-base sm:text-lg font-bold text-slate-900 dark:text-white">
+                  Ansible Linux Deployment Automation
+                </h4>
+              </div>
+              <p className="text-xs text-slate-500 dark:text-slate-400">
+                50% reduction in deployment time; 30% reduction in errors
+              </p>
+            </div>
+
+            <div className="h-52 relative">
+              <Bar
+                key={`deployment-${theme}`}
+                data={metrics.deployment}
+                options={buildOptions("%", dark)}
+              />
+            </div>
+
+            <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed bg-slate-50 dark:bg-slate-800/60 p-4 rounded-2xl border border-slate-100 dark:border-slate-700/60">
+              Automated enterprise Linux release deployments using Ansible and shell scripts, cutting deployment duration by <strong>50%</strong> and production configuration errors by <strong>30%</strong>.
+            </p>
+          </div>
+        </Reveal>
       </div>
     </section>
   );
