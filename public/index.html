@@ -6,37 +6,57 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Avinash Tingre | Senior Software Engineer</title>
+  <title>Avinash Tingre | Senior Software Engineer, Payments Platforms</title>
+  <link rel="canonical" href="https://tingreavinash.github.io/" />
+
+  <!-- Blocking Theme Script to Prevent Flash of Wrong Theme -->
+  <script>
+    try {
+      var stored = localStorage.getItem('theme');
+      var dark = stored ? stored === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (dark) document.documentElement.classList.add('dark');
+    } catch (e) {}
+  </script>
 
   <!-- SEO -->
   <meta name="description"
-        content="Avinash Tingre - Senior Software Engineer specializing in distributed systems, fintech platforms, Java & Spring Boot. Building scalable, high-availability systems and developer productivity tools." />
+        content="Avinash Tingre is a Senior Software Engineer with 9 years of experience building payment platforms in Java and Spring Boot. Design owner and epic lead for a 40M+ card data migration on Mastercard Checkout Solutions (Click to Pay)." />
   <meta name="keywords"
-        content="Avinash Tingre, Senior Software Engineer, Java, Spring Boot, Distributed Systems, Microservices, FinTech, Backend Engineer, Pune" />
+        content="Avinash Tingre, Mastercard, Senior Software Engineer, Payments Platforms, Click to Pay, Directory 2.0, 40M Card Migration, Java 17, Spring Boot, Distributed Systems, Pune" />
   <meta name="author" content="Avinash Tingre" />
 
-  <!-- Theme -->
-  <meta name="theme-color" content="#0f172a" />
+  <!-- Theme Colors (Split into Light/Dark media variants) -->
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fcfcf9" />
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0b0f19" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Avinash Tingre | Senior Software Engineer" />
+  <meta property="og:title" content="Avinash Tingre | Senior Software Engineer, Payments Platforms" />
   <meta property="og:description"
-        content="Portfolio of Avinash Tingre - building scalable backend systems and developer productivity tooling." />
+        content="Senior Software Engineer with 9 years building payment platforms in Java & Spring Boot at Mastercard. Design owner for a 40M+ card data migration." />
   <meta property="og:url" content="https://tingreavinash.github.io/" />
-  <meta property="og:image" content="https://tingreavinash.github.io/assets/images/profile.jpeg" />
+  <meta property="og:image" content="https://tingreavinash.github.io/assets/images/og-card.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
   <meta property="og:site_name" content="Avinash Tingre Portfolio" />
   <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Avinash Tingre | Senior Software Engineer, Payments Platforms" />
+  <meta name="twitter:description"
+        content="Senior Software Engineer with 9 years building payment platforms in Java & Spring Boot at Mastercard. Design owner for a 40M+ card data migration." />
+  <meta name="twitter:image" content="https://tingreavinash.github.io/assets/images/og-card.png" />
 
   <!-- Favicons -->
   <link rel="icon" type="image/svg+xml" href="%PUBLIC_URL%/assets/icons/favicon.svg" />
   <link rel="apple-touch-icon" type="image/svg+xml" href="%PUBLIC_URL%/assets/icons/favicon.svg" />
-
-  <!-- Required for V1 version -->
-  <!-- <link href="%PUBLIC_URL%/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" /> -->
-  
-  <!-- Manifest -->
   <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+  <!-- Google Fonts Preconnect and Fonts Loading -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
   <!-- Google Tag Manager -->
   <link rel="preconnect" href="https://www.googletagmanager.com" />
@@ -64,17 +84,28 @@
     "@type": "Person",
     "name": "Avinash Tingre",
     "url": "https://tingreavinash.github.io",
-    "image": "https://tingreavinash.github.io/assets/images/profile.jpeg",
+    "image": "https://tingreavinash.github.io/assets/images/avatar.webp",
     "jobTitle": "Senior Software Engineer",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Mastercard"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Pune",
+      "addressCountry": "IN"
+    },
     "sameAs": [
+      "https://tingre.in/",
       "https://linkedin.com/in/tingreavinash",
-      "https://github.com/tingreavinash"
+      "https://github.com/tingreavinash",
+      "https://x.com/tingreavinash"
     ]
   }
   </script>
 </head>
 
-<body class="custom-scrollbar-css">
+<body>
   <!-- Google Tag Manager (noscript) -->
   <noscript>
     <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TCQ7XPDT"
@@ -86,9 +117,5 @@
   <noscript>You need to enable JavaScript to run this app.</noscript>
 
   <div id="root"></div>
-
-  <!-- Required for V1 version -->
-  <!-- <script src="%PUBLIC_URL%/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script> -->
-  <!-- <script src="%PUBLIC_URL%/assets/vendor/momentjs/js/moment.js"></script> -->
 </body>
 </html>

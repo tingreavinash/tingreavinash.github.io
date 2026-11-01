@@ -1,70 +1,35 @@
-# Getting Started with Create React App
+# Avinash Tingre — Personal Portfolio & Resume Site
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Personal engineering portfolio and resume site for **Avinash Tingre**, Senior Software Engineer specializing in payments platforms, distributed systems, Java 17, and Spring Boot.
 
-## Available Scripts
+- **Production URL**: [https://tingreavinash.github.io/](https://tingreavinash.github.io/)
+- **Domain Alias**: [https://tingre.in/](https://tingre.in/)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Architecture & Content Structure
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The production application is located under `src/components/V2/` built with React 18, Tailwind CSS, and Chart.js.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Single Source of Truth
+- **`src/components/V2/data/experience.js`**: Contains career timeline and education details. This file mirrors `I:\Projects\Resume\Avinash_Tingre_Resume.txt`. All copy and highlight bullets must remain public-safe and production-sanitized.
+- **`src/components/V2/data/site.js`**: Centralized configuration holding the resume path (`RESUME_URL`), contact email (`EMAIL`), and profile links (`SOCIALS`). All contact links across the site must consume this file.
+- **Data Integrity**: All metrics, numbers, and achievements presented in the Hero, About, and Metrics sections (e.g. 40M+ card migration, ~50% p90 latency cut, 90% unit test coverage, 71% branch cleanup) must directly correspond to verifiable milestones in the resume.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Replacing the Resume PDF
 
-### `npm run build`
+To update the downloadable resume:
+1. Compile or export the new resume PDF.
+2. Replace `public/assets/resume/Avinash_Tingre_Resume.pdf`.
+3. Re-build and deploy the project.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Scripts
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **`npm start`**: Runs the development server at `http://localhost:3000`.
+- **`npm test`**: Runs the test suite via Jest and React Testing Library (`npm test -- --watchAll=false`).
+- **`npm run build`**: Compiles an optimized, production-ready build into the `build/` folder.
+- **`npm run deploy`**: Builds the production bundles and publishes the `build/` directory to GitHub Pages via `gh-pages`.
