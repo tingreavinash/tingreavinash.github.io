@@ -70,7 +70,7 @@ export default function About() {
                   Engineering Philosophy
                 </p>
                 <p className="text-xs sm:text-sm font-semibold text-slate-800 dark:text-slate-200 italic mt-1">
-                  "Architect for resilience, optimize for sub-millisecond precision."
+                  "Build for scale, automate for sanity."
                 </p>
               </div>
             </div>
